@@ -14,7 +14,7 @@ console.log("booking.controller.js loaded");
    http://10.139.138.46:5000
 */
 
-const API_BASE_URL = "http://10.75.111.46:5000";
+const API_BASE_URL = "https://nivasurgery-backend-production.up.railway.app";
 
 
 /* =========================================================
