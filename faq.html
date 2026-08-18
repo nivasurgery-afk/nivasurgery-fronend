@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FAQs - Niva Surgery | Surgical Care & Patient Information</title>
+
+  <meta
+    name="description"
+    content="Frequently asked questions about Niva Surgery, surgical consultations, procedures, treatment planning, hospital care, recovery and patient assistance."
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7faf9;
+      color: #24383d;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e6eeee;
+    }
+
+    .desktop-header {
+      max-width: 1240px;
+      height: 72px;
+      margin: auto;
+      padding: 0 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .lab-name {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .niva {
+      color: #078f89;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .healthcare {
+      color: #173f46;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-right a {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid #e1eceb;
+      border-radius: 50%;
+
+      color: #078f89;
+      text-decoration: none;
+
+      transition: .2s ease;
+    }
+
+    .header-right a:hover {
+      background: #078f89;
+      color: #ffffff;
+    }
+
+    .mobile-header {
+      display: none;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .faq-hero {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 70px 25px 50px;
+      text-align: center;
+    }
+
+    .faq-eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+
+      color: #078f89;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .faq-hero h1 {
+      color: #173f46;
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 15px;
+      letter-spacing: -1px;
+    }
+
+    .faq-hero p {
+      max-width: 680px;
+      margin: auto;
+
+      color: #718186;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       FAQ CONTENT
+    ========================= */
+
+    .faq-container {
+      width: calc(100% - 50px);
+      max-width: 900px;
+      margin: 0 auto 80px;
+    }
+
+    .faq-group {
+      margin-bottom: 38px;
+    }
+
+    .faq-group-title {
+      margin-bottom: 14px;
+
+      color: #173f46;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+
+      background: #ffffff;
+      border: 1px solid #e2eceb;
+      border-radius: 10px;
+
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 19px 20px;
+
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      border: 0;
+      background: #ffffff;
+
+      color: #263e43;
+      text-align: left;
+
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .faq-question:hover {
+      background: #f9fcfb;
+    }
+
+    .faq-question i {
+      margin-left: auto;
+      color: #078f89;
+      font-size: 11px;
+    }
+
+    .faq-number {
+      color: #078f89;
+      font-size: 10px;
+      font-weight: 800;
+      min-width: 25px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 55px 20px 60px;
+    }
+
+    .faq-answer p {
+      color: #718186;
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+
+    /* =========================
+       ASSISTANCE BOX
+    ========================= */
+
+    .faq-help {
+      margin-top: 45px;
+      padding: 30px;
+
+      border: 1px solid #dcebea;
+      border-radius: 14px;
+
+      background: #eef8f7;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .faq-help h3 {
+      color: #173f46;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .faq-help p {
+      color: #718186;
+      font-size: 12px;
+    }
+
+    .faq-help a {
+      flex-shrink: 0;
+
+      padding: 11px 18px;
+
+      background: #078f89;
+      color: #ffffff;
+
+      border-radius: 7px;
+      text-decoration: none;
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .faq-help a:hover {
+      background: #067b76;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #173f46;
+      color: #ffffff;
+      padding: 40px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .footer-brand span {
+      color: #62d2cc;
+    }
+
+    .footer-text {
+      max-width: 400px;
+      margin-top: 10px;
+
+      color: #b8cbcd;
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .footer-links a {
+      color: #dce8e9;
+      font-size: 11px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #62d2cc;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .desktop-header {
+        display: none;
+      }
+
+      .mobile-header {
+        height: 64px;
+        padding: 0 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .mobile-header > a {
+        color: #078f89;
+        font-size: 17px;
+      }
+
+      .faq-hero {
+        padding: 50px 20px 35px;
+      }
+
+      .faq-hero h1 {
+        font-size: 30px;
+      }
+
+      .faq-container {
+        width: calc(100% - 30px);
+      }
+
+      .faq-question {
+        padding: 16px;
+        font-size: 12px;
+      }
+
+      .faq-answer {
+        padding: 0 20px 18px 48px;
+      }
+
+      .faq-help {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+
+
+<main>
+
+  <section class="faq-hero">
+
+    <span class="faq-eyebrow">HELP & INFORMATION</span>
+
+    <h1>Frequently Asked Questions</h1>
+
+    <p>
+      Find clear information about surgical consultations, treatment
+      options, procedures, hospital care, recovery and patient support
+      at Niva Surgery.
+    </p>
+
+  </section>
+
+
+  <section class="faq-container">
+
+
+    <div class="faq-group">
+
+      <h2 class="faq-group-title">General Surgical Care</h2>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">01</span>
+          How do I book a surgical consultation?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            You can contact Niva Surgery by phone or WhatsApp to request
+            a consultation. Our team can help you understand the available
+            surgical specialty and guide you regarding the next step.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">02</span>
+          Will I need surgery after my consultation?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Surgery is recommended only after appropriate clinical
+            evaluation. Your surgeon will review your symptoms, medical
+            history, examination findings and relevant investigations
+            before discussing treatment options.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">03</span>
+          What should I bring to my consultation?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Bring previous medical records, investigation reports,
+            imaging reports, medication details and any relevant
+            documents that may help your surgeon understand your condition.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="faq-group">
+
+      <h2 class="faq-group-title">Surgical Specialties</h2>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">04</span>
+          What conditions are treated under orthopedic surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Orthopedic surgery covers selected conditions affecting bones,
+            joints, ligaments and related structures. Services may include
+            fracture surgery, joint replacement and ligament-related
+            procedures.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">05</span>
+          What is fracture surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Fracture surgery is used for selected broken bones where
+            surgical treatment may be required. The treatment approach
+            depends on the location, type and severity of the fracture.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">06</span>
+          What procedures are included in general surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            General surgery may include procedures for conditions such as
+            hernia, appendix, gallbladder, breast conditions and other
+            commonly treated surgical problems.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">07</span>
+          What is laparoscopic surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Laparoscopic surgery is a minimally invasive surgical approach
+            that uses small incisions and specialized instruments. It may
+            be suitable for selected abdominal and general surgical
+            procedures.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">08</span>
+          What is gallbladder surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Gallbladder surgery may be recommended for selected patients
+            with symptomatic gallstones or other gallbladder conditions.
+            Your surgeon will assess your symptoms and investigations
+            before recommending treatment.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">09</span>
+          What is appendix surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Appendix surgery, also known as appendectomy, involves
+            surgical removal of the appendix when clinically indicated.
+            Suspected appendicitis requires timely medical assessment.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">10</span>
+          What is oncology surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Oncology surgery involves surgical management of selected
+            tumors and cancer-related conditions. Treatment planning
+            depends on the type, location and clinical characteristics
+            of the condition.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">11</span>
+          What surgical care is available for women's health?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Obstetrics and gynecology surgical care includes evaluation
+            and treatment planning for selected women's health conditions,
+            including procedures such as hysterectomy when clinically
+            appropriate.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="faq-group">
+
+      <h2 class="faq-group-title">Treatment & Recovery</h2>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">12</span>
+          How long will recovery take after surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Recovery varies depending on the type of procedure, individual
+            health and the surgical approach. Your surgeon will provide
+            specific recovery instructions after treatment.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">13</span>
+          Will I need a follow-up after surgery?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Follow-up appointments help your surgical team monitor healing,
+            recovery and any concerns after the procedure. Your surgeon
+            will advise you about the appropriate follow-up schedule.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span class="faq-number">14</span>
+          Can I ask questions about my treatment?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes. Patients are encouraged to discuss their concerns,
+            treatment options, expected recovery and other questions
+            with their surgical team before making treatment decisions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="faq-help">
+
+      <div>
+        <h3>Need help with your surgical care?</h3>
+
+        <p>
+          Speak with the Niva Surgery team about consultations,
+          appointments and available surgical services.
+        </p>
+      </div>
+
+      <a href="contact.html">
+        Get Assistance
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<script>
+
+  const faqQuestions =
+    document.querySelectorAll(".faq-question");
+
+  faqQuestions.forEach(function(question) {
+
+    question.addEventListener("click", function() {
+
+      const currentItem =
+        question.closest(".faq-item");
+
+      document.querySelectorAll(".faq-item").forEach(function(item) {
+
+        if (item !== currentItem) {
+          item.classList.remove("active");
+        }
+
+      });
+
+      currentItem.classList.toggle("active");
+
+    });
+
+  });
+
+</script>
+
+
+</body>
+</html>

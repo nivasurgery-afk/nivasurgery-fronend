@@ -1,0 +1,1464 @@
+/* =========================================================
+   NIVA SURGERY — MASTER SURGERY PAGE
+   CLEAN / COMPACT / DESKTOP + MOBILE
+========================================================= */
+
+:root {
+  --surgery-primary: #159fa2;
+  --surgery-primary-dark: #087b7e;
+  --surgery-blue: #4fb6ff;
+  --surgery-pink: #ff6f9f;
+
+  --surgery-dark: #17383f;
+  --surgery-text: #40545a;
+  --surgery-muted: #7d8d92;
+
+  --surgery-bg: #f7fafb;
+  --surgery-white: #ffffff;
+  --surgery-border: #e5edef;
+
+  --surgery-radius: 16px;
+  --surgery-shadow: 0 12px 32px rgba(23, 56, 63, 0.07);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--surgery-text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.surgery-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   COMMON WIDTH
+========================================================= */
+
+.surgery-content-width {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.surgery-hero {
+  padding: 28px 0 42px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7fbfc 0%,
+      #ffffff 100%
+    );
+}
+
+.surgery-hero-container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.65fr)
+    minmax(310px, 0.72fr);
+
+  gap: 20px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   HERO IMAGE / SLIDER
+========================================================= */
+
+.surgery-hero-media {
+  position: relative;
+
+  min-height: 400px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #dfecee;
+
+  box-shadow: var(--surgery-shadow);
+}
+
+.surgery-hero-slider {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+
+  position: relative;
+}
+
+
+/* JS GENERATED SLIDES */
+
+.surgery-hero-slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.55s ease,
+    visibility 0.55s ease;
+}
+
+.surgery-hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.surgery-hero-slide img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* IMAGE OVERLAY */
+
+.surgery-hero-slide::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 45, 52, 0.70) 0%,
+      rgba(12, 45, 52, 0.30) 46%,
+      rgba(12, 45, 52, 0.03) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.surgery-slide-content {
+  position: absolute;
+  z-index: 2;
+
+  left: 32px;
+  bottom: 34px;
+
+  max-width: 470px;
+
+  color: #fff;
+}
+
+.surgery-slide-kicker {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.surgery-slide-title {
+  margin: 0;
+
+  font-size: clamp(28px, 3vw, 40px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.1px;
+
+  color: #fff;
+}
+
+.surgery-slide-text {
+  margin: 12px 0 0;
+
+  max-width: 430px;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   HERO SLIDER DOTS
+========================================================= */
+
+.surgery-slider-dots {
+  position: absolute;
+  z-index: 5;
+
+  left: 32px;
+  bottom: 17px;
+
+  display: flex;
+  gap: 5px;
+}
+
+.surgery-slider-dot {
+  width: 18px;
+  height: 3px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.surgery-slider-dot.active {
+  width: 30px;
+
+  background: #fff;
+}
+
+
+/* =========================================================
+   CONSULTATION PANEL
+========================================================= */
+
+.surgery-consultation {
+  display: flex;
+  flex-direction: column;
+
+  padding: 27px;
+
+  background: #fff;
+
+  border: 1px solid var(--surgery-border);
+
+  border-radius: 20px;
+
+  box-shadow: var(--surgery-shadow);
+}
+
+.consultation-header {
+  margin-bottom: 20px;
+}
+
+.consultation-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: var(--surgery-primary);
+}
+
+.consultation-header h1 {
+  margin: 0;
+
+  font-size: 25px;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.6px;
+
+  color: var(--surgery-dark);
+}
+
+.consultation-header p {
+  margin: 9px 0 0;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.consultation-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 10px;
+  font-weight: 700;
+
+  color: var(--surgery-dark);
+}
+
+.form-field input {
+  width: 100%;
+  height: 45px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dce6e8;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fbfcfc;
+
+  font-size: 12px;
+
+  color: var(--surgery-dark);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-field input:focus {
+  border-color: var(--surgery-primary);
+
+  background: #fff;
+
+  box-shadow:
+    0 0 0 3px rgba(21, 159, 162, 0.08);
+}
+
+.form-field input::placeholder {
+  color: #a3afb3;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.consultation-submit {
+  width: 100%;
+  height: 46px;
+
+  margin-top: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--surgery-primary),
+      var(--surgery-blue)
+    );
+
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.consultation-submit:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(21, 159, 162, 0.18);
+}
+
+.consultation-submit i {
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+.consultation-note {
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  display: flex;
+
+  gap: 8px;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  color: #8b999d;
+}
+
+.consultation-note i {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: var(--surgery-primary);
+}
+
+
+/* =========================================================
+   ALL SECTIONS
+========================================================= */
+
+.surgery-introduction,
+.surgery-treatment-section,
+.surgery-options-section,
+.surgery-finance-section,
+.surgery-journey-section,
+.surgery-trust-section,
+.surgery-faq-section,
+.related-surgeries-section {
+  padding: 62px 0;
+}
+
+.surgery-introduction,
+.surgery-options-section,
+.surgery-journey-section,
+.related-surgeries-section {
+  background: #fff;
+}
+
+.surgery-treatment-section,
+.surgery-finance-section,
+.surgery-trust-section,
+.surgery-faq-section {
+  background: var(--surgery-bg);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+  max-width: 680px;
+
+  margin-bottom: 30px;
+}
+
+.section-eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: var(--surgery-primary);
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: clamp(25px, 2.5vw, 32px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.8px;
+
+  color: var(--surgery-dark);
+}
+
+.section-heading p,
+.section-description {
+  margin: 11px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   CONDITIONS
+========================================================= */
+
+.condition-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 13px;
+}
+
+.condition-item {
+  padding: 20px;
+
+  background: #fff;
+
+  border: 1px solid var(--surgery-border);
+
+  border-radius: 13px;
+}
+
+.condition-item h3 {
+  margin: 0 0 7px;
+
+  font-size: 13px;
+
+  color: var(--surgery-dark);
+}
+
+.condition-item p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   TREATMENT
+========================================================= */
+
+.treatment-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 13px;
+}
+
+.treatment-item {
+  padding: 20px;
+
+  background: #fff;
+
+  border: 1px solid var(--surgery-border);
+
+  border-radius: 13px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.treatment-item:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--surgery-shadow);
+}
+
+.treatment-item h3 {
+  margin: 0 0 7px;
+
+  font-size: 14px;
+
+  color: var(--surgery-dark);
+}
+
+.treatment-item p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   PROCEDURES
+========================================================= */
+
+.procedure-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.procedure-item {
+  padding: 17px 19px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border: 1px solid var(--surgery-border);
+
+  border-radius: 11px;
+
+  background: #fff;
+}
+
+.procedure-item h3 {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: var(--surgery-dark);
+}
+
+.procedure-item p {
+  margin: 4px 0 0;
+
+  font-size: 10.5px;
+
+  line-height: 1.5;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   FINANCE
+========================================================= */
+
+.finance-slider {
+  overflow: hidden;
+}
+
+.finance-track {
+  display: flex;
+
+  gap: 13px;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.finance-card {
+  flex: 0 0 calc(50% - 6.5px);
+
+  min-height: 155px;
+
+  padding: 22px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0fbfb,
+      #f7fbff
+    );
+
+  border: 1px solid #dfeef0;
+}
+
+.finance-card h3 {
+  margin: 0 0 7px;
+
+  font-size: 15px;
+
+  color: var(--surgery-dark);
+}
+
+.finance-card p {
+  margin: 0;
+
+  max-width: 470px;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+
+  color: var(--surgery-muted);
+}
+
+.finance-dots {
+  margin-top: 14px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.finance-dot {
+  width: 18px;
+  height: 3px;
+
+  border: 0;
+
+  border-radius: 20px;
+
+  background: #d6e2e4;
+}
+
+.finance-dot.active {
+  background: var(--surgery-primary);
+}
+
+
+/* =========================================================
+   PATIENT JOURNEY
+========================================================= */
+
+.journey-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 0;
+
+  position: relative;
+}
+
+.journey-list::before {
+  content: "";
+
+  position: absolute;
+
+  left: 8%;
+  right: 8%;
+
+  top: 25px;
+
+  height: 1px;
+
+  background: #dce7e9;
+}
+
+.journey-item {
+  position: relative;
+
+  z-index: 1;
+
+  padding: 0 8px;
+
+  text-align: center;
+}
+
+.journey-number {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  border: 1px solid #dce8ea;
+
+  color: var(--surgery-primary);
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.journey-item h3 {
+  margin: 0 0 6px;
+
+  font-size: 12px;
+
+  color: var(--surgery-dark);
+}
+
+.journey-item p {
+  margin: 0;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+.trust-item {
+  padding: 20px;
+
+  background: #fff;
+
+  border: 1px solid var(--surgery-border);
+
+  border-radius: 13px;
+}
+
+.trust-item h3 {
+  margin: 0 0 7px;
+
+  font-size: 13px;
+
+  color: var(--surgery-dark);
+}
+
+.trust-item p {
+  margin: 0;
+
+  font-size: 10.5px;
+
+  line-height: 1.6;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.surgery-faq-list {
+  max-width: 850px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.surgery-faq-item {
+  background: #fff;
+
+  border: 1px solid var(--surgery-border);
+
+  border-radius: 11px;
+
+  overflow: hidden;
+}
+
+.surgery-faq-question {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
+
+  border: 0;
+
+  background: transparent;
+
+  text-align: left;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: var(--surgery-dark);
+}
+
+.surgery-faq-toggle {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #dce7e9;
+
+  border-radius: 50%;
+
+  color: var(--surgery-primary);
+
+  font-size: 13px;
+}
+
+.surgery-faq-answer {
+  display: none;
+
+  padding: 0 18px 17px;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  color: var(--surgery-muted);
+}
+
+.surgery-faq-item.active .surgery-faq-answer {
+  display: block;
+}
+
+
+/* =========================================================
+   RELATED SURGERIES
+========================================================= */
+
+.related-surgery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 13px;
+}
+
+.related-surgery-card {
+  overflow: hidden;
+
+  background: #fff;
+
+  border: 1px solid var(--surgery-border);
+
+  border-radius: 13px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.related-surgery-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--surgery-shadow);
+}
+
+.related-surgery-image {
+  width: 100%;
+
+  height: 145px;
+
+  object-fit: cover;
+}
+
+.related-surgery-content {
+  padding: 16px;
+}
+
+.related-surgery-content h3 {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: var(--surgery-dark);
+}
+
+.related-surgery-content p {
+  margin: 6px 0 0;
+
+  font-size: 10.5px;
+
+  line-height: 1.5;
+
+  color: var(--surgery-muted);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.surgery-final-cta {
+  padding: 48px 0;
+
+  background:
+    linear-gradient(
+      110deg,
+      #123f46,
+      #087b7e
+    );
+}
+
+.final-cta-inner {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.final-cta-inner .section-eyebrow {
+  color: #8de3e4;
+}
+
+.final-cta-inner h2 {
+  margin: 0;
+
+  font-size: 27px;
+
+  letter-spacing: -0.7px;
+
+  color: #fff;
+}
+
+.final-cta-inner p {
+  max-width: 570px;
+
+  margin: 8px 0 0;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.final-consultation-button {
+  flex: 0 0 auto;
+
+  min-width: 175px;
+
+  height: 44px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: #fff;
+
+  color: var(--surgery-primary-dark);
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.final-consultation-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .surgery-hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .surgery-consultation {
+    max-width: 620px;
+  }
+
+  .condition-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .trust-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .journey-list {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 32px 0;
+  }
+
+  .journey-list::before {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .surgery-content-width,
+  .surgery-hero-container {
+    width:
+      min(
+        calc(100% - 24px),
+        1120px
+      );
+  }
+
+  .surgery-hero {
+    padding: 16px 0 28px;
+  }
+
+  .surgery-hero-container {
+    gap: 14px;
+  }
+
+  .surgery-hero-media {
+    min-height: 330px;
+
+    border-radius: 16px;
+  }
+
+  .surgery-hero-slider {
+    min-height: 330px;
+  }
+
+  .surgery-slide-content {
+    left: 20px;
+    right: 20px;
+
+    bottom: 27px;
+
+    max-width: 90%;
+  }
+
+  .surgery-slide-title {
+    font-size: 28px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .surgery-slide-text {
+    font-size: 11px;
+
+    line-height: 1.55;
+  }
+
+  .surgery-slider-dots {
+    left: 20px;
+
+    bottom: 15px;
+  }
+
+  .surgery-consultation {
+    padding: 22px;
+
+    border-radius: 16px;
+  }
+
+  .consultation-header {
+    margin-bottom: 17px;
+  }
+
+  .consultation-header h1 {
+    font-size: 22px;
+  }
+
+  .consultation-header p {
+    font-size: 11px;
+  }
+
+  .form-field input {
+    height: 45px;
+  }
+
+
+  /* SECTIONS */
+
+  .surgery-introduction,
+  .surgery-treatment-section,
+  .surgery-options-section,
+  .surgery-finance-section,
+  .surgery-journey-section,
+  .surgery-trust-section,
+  .surgery-faq-section,
+  .related-surgeries-section {
+    padding: 45px 0;
+  }
+
+
+  /* GRIDS */
+
+  .condition-grid,
+  .treatment-grid,
+  .trust-grid,
+  .related-surgery-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* PROCEDURES */
+
+  .procedure-item {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+
+  /* FINANCE */
+
+  .finance-card {
+    flex-basis: 100%;
+
+    min-height: 140px;
+
+    padding: 20px;
+  }
+
+
+  /* JOURNEY */
+
+  .journey-list {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .journey-item {
+    display: grid;
+
+    grid-template-columns:
+      48px 1fr;
+
+    column-gap: 14px;
+
+    text-align: left;
+
+    align-items: center;
+  }
+
+  .journey-number {
+    width: 46px;
+    height: 46px;
+
+    margin: 0;
+
+    grid-row: span 2;
+  }
+
+
+  /* CTA */
+
+  .final-cta-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .final-consultation-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   NIVA SURGERY - CONSULTATION SUCCESS POPUP
+========================================================= */
+
+.niva-success-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(17, 32, 35, 0.48);
+  backdrop-filter: blur(7px);
+}
+
+.niva-success-box {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  padding: 34px 30px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e4eeee;
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(20, 55, 60, 0.20);
+  animation: nivaSuccessIn .25s ease;
+}
+
+@keyframes nivaSuccessIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.niva-success-close {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: #f3f7f7;
+  color: #627276;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.niva-success-close:hover {
+  background: #e9f2f1;
+  color: #173f46;
+}
+
+.niva-success-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e9f7f5;
+  color: #078f89;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.niva-success-box h3 {
+  margin: 0 0 9px;
+  color: #173f46;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.niva-success-box p {
+  max-width: 310px;
+  margin: 0 auto 22px;
+  color: #718186;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.niva-success-button {
+  width: 100%;
+  height: 42px;
+  border: 0;
+  border-radius: 10px;
+  background: #078f89;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.niva-success-button:hover {
+  background: #067c77;
+}

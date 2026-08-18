@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Website Disclaimer - Niva Surgery</title>
+
+  <meta
+    name="description"
+    content="Website disclaimer for Niva Surgery, Vinayaka Hospital."
+  >
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: #f5f7fa;
+      color: #273444;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    /* =========================================================
+       PAGE
+    ========================================================= */
+
+    .niva-disclaimer-page {
+      min-height: 100vh;
+      padding: 60px 24px;
+    }
+
+    .niva-disclaimer-container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #e5eaf0;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow:
+        0 12px 35px rgba(15, 35, 55, 0.07);
+    }
+
+
+    /* =========================================================
+       TOP HEADER
+    ========================================================= */
+
+    .niva-disclaimer-header {
+      padding: 48px 55px 40px;
+      text-align: center;
+      border-bottom: 1px solid #edf0f4;
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #fbfcfd 100%
+        );
+    }
+
+    .niva-disclaimer-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      margin-bottom: 14px;
+      padding: 7px 13px;
+
+      border: 1px solid #dce7f1;
+      border-radius: 50px;
+
+      color: #1769aa;
+      background: #f5f9fd;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .niva-disclaimer-label::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1769aa;
+    }
+
+    .niva-disclaimer-header h1 {
+      margin: 0 0 10px;
+
+      color: #14283b;
+
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.15;
+      font-weight: 750;
+      letter-spacing: -0.025em;
+    }
+
+    .niva-disclaimer-header p {
+      max-width: 600px;
+      margin: 0 auto;
+
+      color: #718096;
+      font-size: 15px;
+    }
+
+
+    /* =========================================================
+       CONTENT
+    ========================================================= */
+
+    .niva-disclaimer-content {
+      padding: 45px 55px 50px;
+    }
+
+    .niva-disclaimer-section {
+      padding: 0 0 32px;
+      margin-bottom: 32px;
+
+      border-bottom: 1px solid #edf0f4;
+    }
+
+    .niva-disclaimer-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+
+    /* =========================================================
+       SECTION HEADING
+    ========================================================= */
+
+    .niva-disclaimer-section-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+
+      margin-bottom: 14px;
+    }
+
+    .niva-disclaimer-number {
+      flex: 0 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 34px;
+      height: 34px;
+
+      border-radius: 9px;
+
+      background: #eef6fc;
+      color: #1769aa;
+
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .niva-disclaimer-section h2 {
+      padding-top: 3px;
+
+      color: #172b3e;
+
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+
+    /* =========================================================
+       TEXT
+    ========================================================= */
+
+    .niva-disclaimer-section p {
+      margin: 0 0 12px;
+
+      color: #566575;
+      font-size: 15px;
+    }
+
+    .niva-disclaimer-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .niva-disclaimer-section strong {
+      color: #26394b;
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       CONTACT SECTION
+    ========================================================= */
+
+    .niva-disclaimer-contact {
+      padding: 24px 26px;
+
+      background: #f8fafc;
+      border: 1px solid #e7edf3;
+      border-radius: 12px;
+    }
+
+    .niva-disclaimer-contact p {
+      margin-bottom: 5px;
+    }
+
+    .niva-disclaimer-contact a {
+      color: #1769aa;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .niva-disclaimer-contact a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================================================
+       FINAL NOTICE
+    ========================================================= */
+
+    .niva-disclaimer-final {
+      margin-top: 10px;
+      padding: 20px 22px;
+
+      background: #f5f9fd;
+      border-left: 3px solid #1769aa;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .niva-disclaimer-final p {
+      margin: 0;
+
+      color: #607080;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       FOOTER NOTE
+    ========================================================= */
+
+    .niva-disclaimer-footer {
+      padding: 22px 30px;
+
+      border-top: 1px solid #edf0f4;
+
+      text-align: center;
+
+      color: #8995a2;
+      background: #fbfcfd;
+
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .niva-disclaimer-page {
+        padding: 20px 12px;
+      }
+
+      .niva-disclaimer-container {
+        border-radius: 14px;
+      }
+
+      .niva-disclaimer-header {
+        padding: 34px 22px 30px;
+      }
+
+      .niva-disclaimer-header h1 {
+        font-size: 29px;
+      }
+
+      .niva-disclaimer-header p {
+        font-size: 14px;
+      }
+
+      .niva-disclaimer-content {
+        padding: 32px 22px 35px;
+      }
+
+      .niva-disclaimer-section {
+        padding-bottom: 27px;
+        margin-bottom: 27px;
+      }
+
+      .niva-disclaimer-section-heading {
+        gap: 11px;
+      }
+
+      .niva-disclaimer-number {
+        width: 30px;
+        height: 30px;
+
+        border-radius: 8px;
+
+        font-size: 11px;
+      }
+
+      .niva-disclaimer-section h2 {
+        font-size: 18px;
+      }
+
+      .niva-disclaimer-section p {
+        font-size: 14px;
+      }
+
+      .niva-disclaimer-contact {
+        padding: 20px;
+      }
+
+      .niva-disclaimer-footer {
+        padding: 20px;
+      }
+    }
+
+
+    /* =========================================================
+       VERY SMALL SCREENS
+    ========================================================= */
+
+    @media (max-width: 420px) {
+
+      .niva-disclaimer-page {
+        padding: 10px;
+      }
+
+      .niva-disclaimer-header {
+        padding: 28px 18px 25px;
+      }
+
+      .niva-disclaimer-content {
+        padding: 27px 18px 30px;
+      }
+
+      .niva-disclaimer-section-heading {
+        align-items: flex-start;
+      }
+
+      .niva-disclaimer-section h2 {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="niva-disclaimer-page">
+
+    <div class="niva-disclaimer-container">
+
+
+      <!-- =====================================================
+           HEADER
+      ====================================================== -->
+
+      <header class="niva-disclaimer-header">
+
+        <span class="niva-disclaimer-label">
+          Legal Information
+        </span>
+
+        <h1>
+          Website Disclaimer
+        </h1>
+
+        <p>
+          Niva Surgery · Vinayaka Hospital
+        </p>
+
+      </header>
+
+      
+
+      <!-- =====================================================
+           CONTENT
+      ====================================================== -->
+
+      <div class="niva-disclaimer-content">
+
+
+        <!-- 01 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              01
+            </span>
+
+            <h2>
+              Medical Information Disclaimer
+            </h2>
+
+          </div>
+
+          <p>
+            The content provided on the Niva Surgery website is for
+            <strong>informational purposes only</strong>. It is intended
+            to help users understand medical tests, diagnostics, and
+            general health topics.
+          </p>
+
+          <p>
+            This content must
+            <strong>
+              not be considered a substitute for professional medical
+              advice, diagnosis, or treatment
+            </strong>.
+            Always consult a licensed healthcare provider for medical
+            concerns.
+          </p>
+
+        </section>
+
+
+        <!-- 02 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              02
+            </span>
+
+            <h2>
+              No Doctor–Patient Relationship
+            </h2>
+
+          </div>
+
+          <p>
+            Using our website, forms, chat, or email does
+            <strong>
+              not create a doctor–patient relationship
+            </strong>
+            with Niva Surgery.
+          </p>
+
+          <p>
+            For clinical interpretation of lab reports or health
+            consultation, patients should consult a qualified medical
+            professional.
+          </p>
+
+        </section>
+
+
+        <!-- 03 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              03
+            </span>
+
+            <h2>
+              Accuracy of Information
+            </h2>
+
+          </div>
+
+          <p>
+            Niva Surgery strives to provide accurate and updated medical
+            information; however, we
+            <strong>
+              do not guarantee completeness or accuracy
+            </strong>
+            of the website content.
+          </p>
+
+          <p>
+            Users must verify any critical medical information before
+            relying on it.
+          </p>
+
+        </section>
+
+
+        <!-- 04 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              04
+            </span>
+
+            <h2>
+              External Links Disclaimer
+            </h2>
+
+          </div>
+
+          <p>
+            Our website may include links to third-party websites for
+            information or convenience. These links
+            <strong>
+              do not imply endorsement
+            </strong>.
+          </p>
+
+          <p>
+            Niva Surgery is
+            <strong>not responsible</strong>
+            for content, accuracy, or policies of external websites.
+          </p>
+
+        </section>
+
+
+        <!-- 05 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              05
+            </span>
+
+            <h2>
+              Test Results & Diagnostic Reports
+            </h2>
+
+          </div>
+
+          <p>
+            All test results and reports provided by Niva Surgery must
+            be interpreted by qualified healthcare professionals.
+          </p>
+
+          <p>
+            Website information is
+            <strong>not intended for self-diagnosis</strong>.
+            Decisions should not be made solely on online content.
+          </p>
+
+        </section>
+
+
+        <!-- 06 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              06
+            </span>
+
+            <h2>
+              Limitation of Liability
+            </h2>
+
+          </div>
+
+          <p>
+            Niva Surgery will not be responsible for any loss, injury,
+            or damage resulting from use of the website or reliance on
+            any information provided.
+          </p>
+
+          <p>
+            Users are responsible for their own decisions based on the
+            information available.
+          </p>
+
+        </section>
+
+
+        <!-- 07 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              07
+            </span>
+
+            <h2>
+              No Warranties
+            </h2>
+
+          </div>
+
+          <p>
+            Website information is provided
+            “as-is” without any warranties regarding accuracy, quality,
+            or reliability.
+          </p>
+
+        </section>
+
+
+        <!-- 08 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              08
+            </span>
+
+            <h2>
+              Privacy Disclaimer
+            </h2>
+
+          </div>
+
+          <p>
+            Personal information collected by Niva Surgery is handled
+            according to our
+            <strong>Privacy Policy</strong>.
+            We take reasonable measures to protect user data.
+          </p>
+
+        </section>
+
+
+        <!-- 09 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              09
+            </span>
+
+            <h2>
+              Service Availability
+            </h2>
+
+          </div>
+
+          <p>
+            Website availability may be affected by technical issues
+            or maintenance. Niva Surgery does not guarantee uninterrupted
+            access.
+          </p>
+
+        </section>
+
+
+        <!-- 10 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              10
+            </span>
+
+            <h2>
+              Intellectual Property
+            </h2>
+
+          </div>
+
+          <p>
+            All content, logos, and images on this website are the
+            property of Niva Surgery or respective owners. Unauthorized
+            use is prohibited.
+          </p>
+
+        </section>
+
+
+        <!-- 11 -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-section-heading">
+
+            <span class="niva-disclaimer-number">
+              11
+            </span>
+
+            <h2>
+              Contact Information
+            </h2>
+
+          </div>
+
+          <p>
+            For any concerns, contact us:
+          </p>
+
+          <div class="niva-disclaimer-contact">
+
+            <p>
+              <strong>Phone / WhatsApp:</strong>
+              +91 78922 87102
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:nivasurgery@gmail.com">
+                nivasurgery@gmail.com
+              </a>
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- FINAL NOTICE -->
+
+        <section class="niva-disclaimer-section">
+
+          <div class="niva-disclaimer-final">
+
+            <p>
+              By using this website, you acknowledge that you have read
+              and agree to this Disclaimer. This page may be updated
+              periodically.
+            </p>
+
+          </div>
+
+        </section>
+
+
+      </div>
+
+
+      <!-- =====================================================
+           FOOTER NOTE
+      ====================================================== -->
+
+      <div class="niva-disclaimer-footer">
+        Niva Surgery · Vinayaka Hospital
+      </div>
+
+
+    </div>
+
+  </main>
+
+</body>
+</html>

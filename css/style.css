@@ -1,0 +1,3440 @@
+/* =========================================================
+   NIVA SURGERY — PREMIUM HEADER
+========================================================= */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e7eef0;
+  box-shadow: 0 3px 18px rgba(20, 65, 72, 0.05);
+}
+
+
+/* =========================================================
+   DESKTOP HEADER
+========================================================= */
+
+.desktop-header {
+  width: 100%;
+  min-height: 78px;
+  padding: 0 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.logo-location {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+
+/* =========================================================
+   PREMIUM LOGO
+========================================================= */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.lab-name {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+
+/* NIVA */
+
+.niva {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+  line-height: 1;
+
+  background: linear-gradient(90deg, #4FB6FF, #FF6F9F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* SURGERY */
+
+.healthcare {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  color: #10a6a0;
+}
+
+
+/* SMALL ACCENT UNDER SURGERY */
+
+.healthcare::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 24px;
+  height: 2px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    #10a6a0,
+    #42c6a5
+  );
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location-trigger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 135px;
+  padding-left: 16px;
+  border-left: 1px solid #e1eaec;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.2s ease;
+}
+
+.location-trigger:hover {
+  border-left-color: #10a6a0;
+}
+
+.location-trigger .label {
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+  color: #829197;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.location-trigger .city {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 650;
+  color: #263f45;
+}
+
+.location-icon {
+  color: #10a6a0;
+  font-size: 13px;
+}
+
+.chevron {
+  font-size: 8px;
+  color: #829197;
+  margin-left: 2px;
+}
+
+
+/* =========================================================
+   RIGHT NAVIGATION
+========================================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-item {
+  position: relative;
+  min-width: 86px;
+  height: 50px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+
+  color: #53666c;
+  background: transparent;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 650;
+
+  border: 1px solid transparent;
+  border-radius: 11px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header-item:hover {
+  color: #078f8b;
+  background: #effaf8;
+  border-color: #d9efec;
+  transform: translateY(-1px);
+}
+
+.header-icon {
+  font-size: 14px;
+  color: #10a6a0;
+  transition: color 0.2s ease;
+}
+
+.header-item:hover .header-icon {
+  color: #087e7a;
+}
+
+.header-text {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SURGERY MENU
+========================================================= */
+
+.surgery-menu {
+  position: relative;
+}
+
+.surgery-menu-trigger {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.surgery-chevron {
+  font-size: 8px;
+  color: #829197;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.surgery-menu:hover .surgery-chevron {
+  color: #078f8b;
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   SURGERY DROPDOWN
+========================================================= */
+
+.surgery-dropdown {
+  position: absolute;
+  top: calc(100% + 13px);
+  right: -28px;
+
+  width: 385px;
+  padding: 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfeaec;
+  border-radius: 16px;
+
+  box-shadow:
+    0 24px 60px rgba(20, 65, 72, 0.16),
+    0 5px 18px rgba(20, 65, 72, 0.06);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.98);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* DROPDOWN TOP ACCENT */
+
+.surgery-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 3px;
+
+  border-radius: 0 0 10px 10px;
+
+  background: linear-gradient(
+    90deg,
+    #087f83,
+    #10a6a0,
+    #4bc8a4
+  );
+}
+
+
+/* HOVER BRIDGE */
+
+.surgery-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+
+/* SHOW */
+
+.surgery-menu:hover .surgery-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   DROPDOWN HEADER
+========================================================= */
+
+.surgery-dropdown-header {
+  padding: 3px 6px 15px;
+  border-bottom: 1px solid #edf2f3;
+}
+
+.dropdown-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 750;
+  color: #173f46;
+}
+
+.dropdown-subtitle {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #87979c;
+}
+
+
+/* =========================================================
+   SURGERY LIST
+========================================================= */
+
+.surgery-dropdown-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 7px;
+}
+
+
+/* ITEM */
+
+.surgery-dropdown-item {
+  min-height: 59px;
+  padding: 8px 7px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  border-radius: 11px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.surgery-dropdown-item:hover {
+  background: linear-gradient(
+    90deg,
+    #f0faf8,
+    #f8fcfc
+  );
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   SURGERY ICON
+========================================================= */
+
+.surgery-dropdown-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    145deg,
+    #e7f8f5,
+    #f3fbfa
+  );
+
+  border: 1px solid #d9efeb;
+
+  color: #0c9690;
+
+  font-size: 14px;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.surgery-dropdown-item:hover .surgery-dropdown-icon {
+  background: linear-gradient(
+    145deg,
+    #0d9b95,
+    #16b3a6
+  );
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SURGERY CONTENT
+========================================================= */
+
+.surgery-dropdown-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.surgery-dropdown-content strong {
+  display: block;
+
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: #253f45;
+}
+
+.surgery-dropdown-content small {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 10px;
+  line-height: 1.3;
+
+  color: #89989d;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.surgery-arrow {
+  flex: 0 0 auto;
+
+  font-size: 8px;
+  color: #a5b1b5;
+
+  transition:
+    transform 0.18s ease,
+    color 0.18s ease;
+}
+
+.surgery-dropdown-item:hover .surgery-arrow {
+  color: #0a9690;
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.view-all-surgeries {
+  margin-top: 7px;
+  padding: 13px 7px 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #eaf0f1;
+
+  color: #087f83;
+
+  text-decoration: none;
+
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.view-all-surgeries span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-all-surgeries span i {
+  font-size: 11px;
+}
+
+.view-all-surgeries > i {
+  font-size: 9px;
+
+  transition:
+    transform 0.18s ease;
+}
+
+.view-all-surgeries:hover > i {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
+
+.mobile-header {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .desktop-header {
+    display: none;
+  }
+
+  .mobile-header {
+    min-height: 68px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+  }
+
+  /* MOBILE LOGO */
+
+  .mobile-header .lab-name {
+    gap: 6px;
+  }
+
+  .mobile-header .niva {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+
+  .mobile-header .healthcare {
+    font-size: 14px;
+  }
+
+  .mobile-header .healthcare::after {
+    bottom: -5px;
+    width: 20px;
+  }
+
+
+  /* MOBILE LOCATION */
+
+  .location-section {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 7px 10px;
+
+    border: 1px solid #e1eeee;
+    border-radius: 10px;
+
+    background: #f7fbfb;
+
+    cursor: pointer;
+  }
+
+  .location-section .location-icon {
+    color: #0c9993;
+    font-size: 13px;
+  }
+
+  .location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .location-info .label {
+    font-size: 8px;
+    line-height: 1;
+    font-weight: 700;
+    color: #87979c;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  .location-info .city {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 700;
+
+    color: #263f45;
+  }
+
+  .location-info .chevron {
+    font-size: 7px;
+  }
+
+
+  /* HIDE DESKTOP DROPDOWN ON MOBILE */
+
+  .surgery-dropdown {
+    display: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   NIVA SURGERY — MODERN HERO SLIDER
+========================================================= */
+
+.niva-hero-slider {
+  position: relative;
+  width: 90%;
+  max-width: 980px;
+  height: 340px;
+  margin: 30px auto;
+  overflow: hidden;
+  border: 1px solid #dfeceb;
+  border-radius: 18px;
+  background: linear-gradient(
+    105deg,
+    #f1faf8 0%,
+    #ffffff 55%,
+    #f0faf8 100%
+  );
+  box-shadow: 0 12px 35px rgba(19, 66, 71, 0.08);
+}
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.niva-hero-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   SLIDE
+========================================================= */
+
+.niva-hero-slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  box-sizing: border-box;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(25px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    visibility 0.7s ease;
+}
+
+.niva-hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.niva-hero-info {
+  max-width: 720px;
+}
+
+.niva-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 12px;
+
+  border: 1px solid #cfe8e5;
+  border-radius: 30px;
+
+  background: #f7fcfb;
+
+  color: #078b85;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.niva-hero-tag i {
+  font-size: 11px;
+}
+
+
+.niva-hero-info h1,
+.niva-hero-info h2 {
+  margin: 13px 0 9px;
+
+  color: #173f46;
+
+  font-size: 34px;
+  line-height: 1.12;
+
+  font-weight: 800;
+  letter-spacing: -1.1px;
+}
+
+.niva-hero-info h1 span,
+.niva-hero-info h2 span {
+  color: #078f89;
+}
+
+
+.niva-hero-info p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #687a7f;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.niva-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 17px;
+}
+
+.niva-hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #e0eceb;
+  border-radius: 7px;
+
+  background: rgba(255,255,255,0.85);
+
+  color: #4e6469;
+
+  font-size: 9.5px;
+  font-weight: 650;
+}
+
+.niva-hero-meta i {
+  color: #07958e;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.niva-hero-side {
+  min-width: 190px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 15px 18px;
+
+  border-left: 1px solid #d9e9e7;
+}
+
+.niva-hero-side-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e7f7f4;
+
+  color: #07968f;
+
+  font-size: 20px;
+}
+
+.niva-hero-side strong,
+.niva-hero-side span {
+  display: block;
+}
+
+.niva-hero-side strong {
+  color: #173f46;
+
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.niva-hero-side span {
+  margin-top: 3px;
+
+  color: #789095;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   AUTO SLIDE PROGRESS
+========================================================= */
+
+.niva-hero-indicator {
+  position: absolute;
+
+  left: 70px;
+  right: 70px;
+  bottom: 0;
+
+  height: 2px;
+
+  background: #dceceb;
+}
+
+.niva-hero-progress {
+  display: block;
+
+  width: 0;
+  height: 100%;
+
+  background: #07958e;
+
+  animation: nivaHeroProgress 5s linear infinite;
+}
+
+@keyframes nivaHeroProgress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-hero-slider {
+    width: calc(100% - 24px);
+    height: 310px;
+
+    margin: 15px auto;
+
+    border-radius: 15px;
+  }
+
+  .niva-hero-slide {
+    padding: 25px 28px 30px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .niva-hero-info {
+    width: 100%;
+  }
+
+  .niva-hero-info h1,
+  .niva-hero-info h2 {
+    font-size: 27px;
+    letter-spacing: -0.7px;
+  }
+
+  .niva-hero-info p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .niva-hero-meta {
+    flex-wrap: wrap;
+  }
+
+  .niva-hero-meta span {
+    font-size: 9px;
+  }
+
+  .niva-hero-side {
+    display: none;
+  }
+
+  .niva-hero-indicator {
+    left: 28px;
+    right: 28px;
+  }
+}
+
+
+
+/* =========================================================
+   NIVA SURGERY — FEATURED SURGERIES
+========================================================= */
+
+.niva-featured-surgeries {
+  width: min(1240px, calc(100% - 64px));
+  margin: 55px auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.niva-surgery-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  text-align: center;
+  margin: 0 auto 42px;
+  max-width: 760px;
+}
+
+.niva-surgery-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #078f89;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.niva-surgery-eyebrow i {
+  font-size: 11px;
+}
+
+.niva-surgery-heading h2 {
+  margin: 8px 0 10px;
+  color: #173f46;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.7px;
+  font-weight: 800;
+}
+
+.niva-surgery-heading p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #718186;
+  font-size: 13px;
+  line-height: 1.7;
+}
+/* VIEW ALL - BELOW SLIDER */
+
+.niva-surgery-view-all {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+
+  width: 100%;
+  margin-top: 14px;
+  padding-right: 4px;
+
+  color: #078f89;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.niva-surgery-view-all i {
+  font-size: 9px;
+  transition: transform 0.2s ease;
+}
+
+.niva-surgery-view-all:hover i {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.niva-surgery-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.niva-surgery-track {
+  display: flex;
+  gap: 18px;
+
+  transition: transform .5s cubic-bezier(.22,.61,.36,1);
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.niva-surgery-item {
+  min-width: calc((100% - 36px) / 3);
+
+  overflow: hidden;
+
+  border: 1px solid #e2eceb;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.niva-surgery-item:hover {
+  transform: translateY(-3px);
+
+  border-color: #cde4e1;
+
+  box-shadow:
+    0 14px 32px rgba(20, 65, 70, .09);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.niva-surgery-image {
+  position: relative;
+
+  height: 155px;
+
+  overflow: hidden;
+
+  background: #edf6f5;
+}
+
+.niva-surgery-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform .45s ease;
+}
+
+.niva-surgery-item:hover .niva-surgery-image img {
+  transform: scale(1.035);
+}
+
+
+/* NUMBER */
+
+.niva-surgery-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  padding: 5px 8px;
+
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 6px;
+
+  background: rgba(255,255,255,.9);
+
+  color: #173f46;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.niva-surgery-details {
+  padding: 17px 18px 18px;
+}
+
+.niva-surgery-category {
+  color: #078f89;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  text-transform: uppercase;
+  letter-spacing: .7px;
+}
+
+.niva-surgery-details h3 {
+  margin: 6px 0 7px;
+
+  color: #203e44;
+
+  font-size: 17px;
+  line-height: 1.25;
+
+  font-weight: 750;
+}
+
+.niva-surgery-details p {
+  min-height: 50px;
+
+  margin: 0;
+
+  color: #758489;
+
+  font-size: 10.5px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+========================================================= */
+
+.niva-surgery-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 13px;
+  padding: 8px 11px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #edf8f6;
+
+  color: #078b85;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.niva-surgery-book i {
+  font-size: 8px;
+
+  transition: transform .2s ease;
+}
+
+.niva-surgery-book:hover {
+  background: #078f89;
+  color: #ffffff;
+}
+
+.niva-surgery-book:hover i {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.niva-surgery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.niva-surgery-prev,
+.niva-surgery-next {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dce9e7;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #557075;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.niva-surgery-prev:hover,
+.niva-surgery-next:hover {
+  background: #078f89;
+  color: #ffffff;
+}
+
+.niva-surgery-prev i,
+.niva-surgery-next i {
+  font-size: 9px;
+}
+
+
+/* PROGRESS */
+
+.niva-surgery-progress {
+  width: 90px;
+  height: 3px;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+
+  background: #e2eceb;
+}
+
+.niva-surgery-progress span {
+  display: block;
+
+  width: 33%;
+  height: 100%;
+
+  border-radius: 5px;
+
+  background: #078f89;
+
+  transition: transform .4s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-featured-surgeries {
+    width: calc(100% - 28px);
+    margin: 40px auto;
+  }
+
+  .niva-surgery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .niva-surgery-heading h2 {
+    font-size: 24px;
+  }
+
+  .niva-surgery-heading p {
+    font-size: 11px;
+  }
+
+  .niva-surgery-item {
+    min-width: 100%;
+  }
+
+  .niva-surgery-image {
+    height: 175px;
+  }
+
+  .niva-surgery-details h3 {
+    font-size: 18px;
+  }
+
+  .niva-surgery-controls {
+    justify-content: space-between;
+  }
+
+}
+
+
+/* =========================================================
+   NIVA SURGERY — SURGICAL TRUST SLIDER
+========================================================= */
+
+.niva-surgical-trust {
+  width: min(1120px, calc(100% - 64px));
+  height: 190px;
+
+  margin: 34px auto;
+
+  overflow: hidden;
+
+  border: 1px solid #e1eceb;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(22, 65, 70, 0.06);
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.niva-trust-track {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   SLIDE
+========================================================= */
+
+.niva-trust-slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: stretch;
+
+  background: #ffffff;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(35px);
+
+  transition:
+    opacity .65s ease,
+    transform .65s ease,
+    visibility .65s ease;
+}
+
+.niva-trust-slide.active {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.niva-trust-image {
+  width: 34%;
+  min-width: 34%;
+
+  overflow: hidden;
+
+  background: #edf5f4;
+}
+
+.niva-trust-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform .7s ease;
+}
+
+.niva-trust-slide.active .niva-trust-image img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.niva-trust-content {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 25px 30px;
+}
+
+.niva-trust-label {
+  margin-bottom: 7px;
+  color: #078f89;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.niva-trust-content h3 {
+  margin: 0 0 8px;
+  color: #173f46;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -.5px;
+}
+
+.niva-trust-text,
+.niva-trust-content p {
+  max-width: 480px;
+  margin: 0;
+  color: #718186;
+  font-size: 11px;
+  line-height: 1.7;
+}
+/* =========================================================
+   BOTTOM LABEL
+========================================================= */
+
+.niva-trust-bottom {
+  margin-top: 13px;
+
+  color: #4d666b;
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-surgical-trust {
+    width: calc(100% - 28px);
+    height: 260px;
+
+    margin: 28px auto;
+
+    border-radius: 13px;
+  }
+
+  .niva-trust-slide {
+    flex-direction: column;
+  }
+
+  .niva-trust-image {
+    width: 100%;
+    min-width: 100%;
+    height: 115px;
+  }
+
+  .niva-trust-content {
+    padding: 17px 18px;
+  }
+
+  .niva-trust-content h3 {
+    font-size: 18px;
+  }
+
+  .niva-trust-content p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+}
+
+
+/* =========================================================
+   NIVA SURGERY — PATIENT CARE PATH
+========================================================= */
+
+.niva-care-path {
+  width: min(1180px, calc(100% - 64px));
+  margin: 75px auto;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.niva-care-intro {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.niva-care-kicker {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #078f89;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.niva-care-intro h2 {
+  margin: 0 0 12px;
+
+  color: #173f46;
+
+  font-size: 32px;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: -.8px;
+}
+
+.niva-care-intro p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #687b80;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.niva-care-steps {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  border: 1px solid #dfeae8;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(24, 63, 69, .06);
+}
+
+
+/* =========================================================
+   STEP
+========================================================= */
+
+.niva-care-step {
+  position: relative;
+
+  min-height: 265px;
+
+  padding: 28px 24px;
+
+  border-right: 1px solid #e5eeec;
+
+  background: #ffffff;
+
+  transition:
+    background .25s ease,
+    transform .25s ease;
+}
+
+.niva-care-step:last-child {
+  border-right: 0;
+}
+
+.niva-care-step:hover {
+  background: #f8fbfb;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.niva-care-number {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 35px;
+
+  border-radius: 11px;
+
+  background: #edf7f6;
+
+  color: #078f89;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   STEP LABEL
+========================================================= */
+
+.niva-care-step-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #789095;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: .3px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.niva-care-body h3 {
+  margin: 0 0 11px;
+
+  color: #1d3940;
+
+  font-size: 19px;
+  line-height: 1.3;
+
+  font-weight: 750;
+
+  letter-spacing: -.2px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.niva-care-body p {
+  margin: 0;
+
+  color: #687a7f;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SURGERY HIGHLIGHT
+========================================================= */
+
+.niva-care-highlight {
+  background: #078f89;
+}
+
+.niva-care-highlight:hover {
+  background: #078f89;
+}
+
+.niva-care-highlight .niva-care-number {
+  background: rgba(255,255,255,.16);
+
+  color: #ffffff;
+}
+
+.niva-care-highlight .niva-care-step-label {
+  color: rgba(255,255,255,.72);
+}
+
+.niva-care-highlight .niva-care-body h3 {
+  color: #ffffff;
+}
+
+.niva-care-highlight .niva-care-body p {
+  color: rgba(255,255,255,.82);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-care-path {
+    width: calc(100% - 32px);
+    margin: 50px auto;
+  }
+
+  .niva-care-intro {
+    margin-bottom: 28px;
+  }
+
+  .niva-care-intro h2 {
+    font-size: 26px;
+  }
+
+  .niva-care-intro p {
+    font-size: 13px;
+  }
+
+  .niva-care-steps {
+    display: block;
+
+    border-radius: 16px;
+  }
+
+  .niva-care-step {
+    min-height: auto;
+
+    padding: 24px 22px;
+
+    border-right: 0;
+    border-bottom: 1px solid #e5eeec;
+  }
+
+  .niva-care-step:last-child {
+    border-bottom: 0;
+  }
+
+  .niva-care-number {
+    margin-bottom: 20px;
+  }
+
+  .niva-care-body h3 {
+    font-size: 19px;
+  }
+
+  .niva-care-body p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+}
+
+
+/* =========================================================
+   NIVA SURGERY — COMPACT REVIEW STRIP
+========================================================= */
+
+.niva-review-strip {
+  width: min(1180px, calc(100% - 64px));
+  margin: 55px auto;
+
+  display: grid;
+  grid-template-columns: 1.55fr .75fr;
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   REVIEW SLIDER
+========================================================= */
+
+.niva-review-slider {
+  overflow: hidden;
+
+  border: 1px solid #e2eceb;
+  border-radius: 14px;
+
+  background: #f8fbfb;
+}
+
+
+.niva-review-track {
+  display: flex;
+
+  width: max-content;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  animation: nivaReviewMove 24s linear infinite;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.niva-review-card {
+  width: 245px;
+  min-height: 155px;
+
+  flex-shrink: 0;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e4eceb;
+  border-radius: 11px;
+
+  background: #ffffff;
+}
+
+
+.niva-review-top {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.niva-review-avatar {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #e9f6f5;
+  color: #078f89;
+
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1;
+
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+
+.niva-review-top strong {
+  display: block;
+
+  color: #263e43;
+
+  font-size: 11px;
+}
+
+
+.niva-review-top span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #8a989b;
+
+  font-size: 9px;
+}
+
+
+.niva-review-rating {
+  margin-top: 9px;
+
+  color: #f4a623;
+
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+
+.niva-review-card p {
+  margin: 7px 0 0;
+
+  color: #68797d;
+
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   RIGHT ABOUT
+========================================================= */
+
+.niva-review-about {
+  padding: 22px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #173f46;
+}
+
+
+.niva-review-about > span {
+  margin-bottom: 7px;
+
+  color: #65c9c2;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.niva-review-about h2 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 21px;
+  line-height: 1.25;
+
+  letter-spacing: -.3px;
+}
+
+
+.niva-review-about > p {
+  margin: 0;
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 10.5px;
+  line-height: 1.6;
+}
+
+
+.niva-review-google {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 13px;
+}
+
+
+.niva-review-google strong {
+  color: #ffffff;
+
+  font-size: 10px;
+}
+
+
+.niva-review-google b {
+  color: #f4b942;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   AUTO SLIDE
+========================================================= */
+
+@keyframes nivaReviewMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-790px);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-review-strip {
+    width: calc(100% - 28px);
+
+    display: block;
+
+    margin: 40px auto;
+  }
+
+  .niva-review-slider {
+    width: 100%;
+  }
+
+  .niva-review-card {
+    width: 235px;
+  }
+
+  .niva-review-about {
+    margin-top: 12px;
+  }
+
+}
+
+/* =========================================================
+   NIVA SURGERY — FAQ
+========================================================= */
+
+.niva-surgery-faq {
+  width: min(980px, calc(100% - 40px));
+  margin: 75px auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.niva-faq-heading {
+  max-width: 650px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.niva-faq-heading > span {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #078f89;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.niva-faq-heading h2 {
+  margin: 0 0 11px;
+
+  color: #173f46;
+
+  font-size: 31px;
+  line-height: 1.2;
+  font-weight: 800;
+
+  letter-spacing: -.6px;
+}
+
+.niva-faq-heading p {
+  margin: 0;
+
+  color: #718185;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FAQ LIST
+========================================================= */
+
+.niva-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+
+/* =========================================================
+   FAQ ITEM
+========================================================= */
+
+.niva-faq-item {
+  overflow: hidden;
+
+  border: 1px solid #e1ebe9;
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+.niva-faq-item.active {
+  border-color: #b9dcd9;
+
+  box-shadow: 0 8px 25px rgba(18, 74, 78, .06);
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.niva-faq-question {
+  width: 100%;
+  min-height: 65px;
+
+  padding: 10px 17px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+/* NUMBER */
+
+.niva-faq-number {
+  width: 31px;
+  height: 31px;
+
+  flex: 0 0 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #edf7f6;
+
+  color: #078f89;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+
+/* QUESTION */
+
+.niva-faq-question strong {
+  flex: 1;
+
+  color: #263f44;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PLUS BUTTON
+========================================================= */
+
+.niva-faq-toggle {
+  width: 29px;
+  height: 29px;
+
+  flex: 0 0 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dce8e6;
+  border-radius: 50%;
+
+  color: #078f89;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.niva-faq-item.active .niva-faq-toggle {
+  background: #078f89;
+
+  color: #ffffff;
+
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   ANSWER — HIDDEN BY DEFAULT
+========================================================= */
+
+.niva-faq-answer {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows .3s ease,
+    opacity .2s ease;
+}
+
+.niva-faq-answer p {
+  min-height: 0;
+
+  overflow: hidden;
+
+  margin: 0;
+
+  padding: 0 61px;
+
+  color: #687b80;
+
+  font-size: 12px;
+  line-height: 1.75;
+
+  transition: padding .3s ease;
+}
+
+
+/* =========================================================
+   OPEN ANSWER
+========================================================= */
+
+.niva-faq-item.active .niva-faq-answer {
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+}
+
+.niva-faq-item.active .niva-faq-answer p {
+  padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-surgery-faq {
+    width: calc(100% - 28px);
+    margin: 50px auto;
+  }
+
+
+  .niva-faq-heading {
+    margin-bottom: 25px;
+  }
+
+
+  .niva-faq-heading h2 {
+    font-size: 26px;
+  }
+
+
+  .niva-faq-heading p {
+    font-size: 12px;
+  }
+
+
+  .niva-faq-question {
+    min-height: 61px;
+
+    padding: 10px 13px;
+
+    gap: 10px;
+  }
+
+
+  .niva-faq-number {
+    width: 27px;
+    height: 27px;
+
+    flex-basis: 27px;
+  }
+
+
+  .niva-faq-question strong {
+    font-size: 12px;
+  }
+
+
+  .niva-faq-toggle {
+    width: 26px;
+    height: 26px;
+
+    flex-basis: 26px;
+
+    font-size: 16px;
+  }
+
+
+  .niva-faq-answer p {
+    padding: 0 50px;
+
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+
+  .niva-faq-item.active .niva-faq-answer p {
+    padding-bottom: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   NIVA SURGERY — FOOTER
+========================================================= */
+
+.niva-footer {
+  margin-top: 70px;
+
+  background: #102f35;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.niva-footer-main {
+  width: min(1240px, calc(100% - 80px));
+  margin: auto;
+
+  padding: 58px 0 52px;
+
+  display: grid;
+
+  grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1fr
+    1fr;
+
+  gap: 50px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.niva-footer-brand {
+  max-width: 330px;
+}
+
+
+.niva-footer-logo {
+  display: inline-flex;
+
+  align-items: baseline;
+
+  gap: 7px;
+
+  text-decoration: none;
+}
+
+
+.niva-footer-name {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 31px;
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+  line-height: 1;
+
+  background: linear-gradient(
+    90deg,
+    #4FB6FF,
+    #FF6F9F
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+.niva-footer-type {
+  color: #8bded9;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: .2px;
+}
+
+
+.niva-footer-description {
+  margin: 20px 0 24px;
+
+  max-width: 310px;
+
+  color: #a9c0c3;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.niva-footer-social {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.niva-footer-social a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  border-radius: 9px;
+
+  background: rgba(255,255,255,.04);
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    border-color .2s ease;
+}
+
+
+.niva-footer-social a:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255,255,255,.09);
+
+  border-color: rgba(139,222,217,.45);
+}
+
+
+.niva-footer-social img {
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.niva-footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.niva-footer-column h3 {
+  margin: 3px 0 19px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: .2px;
+}
+
+
+.niva-footer-column a {
+  margin-bottom: 11px;
+
+  color: #9eb5b9;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+.niva-footer-column a:hover {
+  color: #8bded9;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   SEO AREA
+========================================================= */
+
+.niva-footer-seo {
+  width: min(1240px, calc(100% - 80px));
+  margin: auto;
+
+  padding: 27px 0 29px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+
+.niva-footer-seo-item h3 {
+  margin: 0 0 9px;
+
+  color: #d8eeee;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.niva-footer-seo-item p {
+  margin: 0;
+
+  color: #809a9e;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.niva-footer-bottom {
+  min-height: 58px;
+
+  padding: 0 max(40px, calc((100% - 1240px) / 2));
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+
+.niva-footer-bottom p {
+  margin: 0;
+
+  color: #708b8f;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+.niva-footer-bottom p span {
+  margin-left: 8px;
+
+  color: #8da5a8;
+}
+
+
+.niva-footer-bottom-links {
+  display: flex;
+
+  gap: 20px;
+}
+
+
+.niva-footer-bottom-links a {
+  color: #80999d;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  transition: color .2s ease;
+}
+
+
+.niva-footer-bottom-links a:hover {
+  color: #8bded9;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-footer {
+    margin-top: 50px;
+  }
+
+
+  .niva-footer-main {
+    width: calc(100% - 32px);
+
+    padding: 42px 0 35px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 25px;
+  }
+
+
+  .niva-footer-brand {
+    grid-column: 1 / -1;
+
+    max-width: 100%;
+  }
+
+
+  .niva-footer-description {
+    max-width: 100%;
+  }
+
+
+  .niva-footer-column h3 {
+    margin-bottom: 15px;
+  }
+
+
+  .niva-footer-seo {
+    width: calc(100% - 32px);
+
+    padding: 25px 0;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+
+  .niva-footer-bottom {
+    min-height: auto;
+
+    padding: 20px 16px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+
+  .niva-footer-bottom p span {
+    display: block;
+
+    margin: 5px 0 0;
+  }
+
+}
+
+
+/* =========================================================
+   LOCATION POPUP (DESKTOP + MOBILE)
+========================================================= */
+.location-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.location-popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= POPUP CARD ================= */
+.popup-card {
+  position: relative;
+  max-width: 460px;
+  width: calc(100% - 32px);
+
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 22px;
+  padding: 22px;
+
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.35),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  border: 1px solid rgba(226,232,240,0.9);
+
+  animation: popupScale 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes popupScale {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= HEADER ================= */
+.popup-header {
+  padding-right: 46px;
+}
+
+.popup-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* ================= CLOSE BUTTON ================= */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+
+  font-size: 20px;
+  line-height: 1;
+  color: #334155;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(15,23,42,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 32px rgba(15,23,42,0.35);
+  background: rgba(255,255,255,0.95);
+}
+
+/* ================= SEARCH (MODERN / PREMIUM) ================= */
+.search-wrapper {
+  position: relative;
+  margin: 22px 0 20px;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+
+  color: #64748b;
+  opacity: 0.6;
+
+  pointer-events: none;
+  transition: 
+    color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Input */
+.city-search {
+  width: 100%;
+  height: 58px;
+
+  padding: 0 18px 0 50px;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(180deg, #ffffff, #f8fafc);
+
+  border: 1px solid rgba(226,232,240,0.9);
+
+  font-size: 15px;
+  font-weight: 500;
+  color: #0f172a;
+
+  box-shadow:
+    inset 0 1px 2px rgba(15,23,42,0.04),
+    0 10px 30px rgba(15,23,42,0.08);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+/* Placeholder */
+.city-search::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Focus State */
+.city-search:focus {
+  outline: none;
+
+  background: #ffffff;
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37,99,235,0.18),
+    0 18px 40px rgba(37,99,235,0.25);
+
+  transform: translateY(-1px);
+}
+
+/* Icon reacts on focus */
+.city-search:focus + .search-icon,
+.city-search:focus ~ .search-icon {
+  color: #2563eb;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Hover (subtle, modern) */
+.city-search:hover {
+  border-color: #cbd5f5;
+}
+
+/* ================= SECTION LABEL ================= */
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+/* ================= CITY LIST ================= */
+.city-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.city-list button {
+  padding: 9px 16px;
+  border-radius: 999px;
+
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.city-list button:hover {
+  background: #e0f2fe;
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(15,23,42,0.12);
+}
+
+.city-list button.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 10px 24px rgba(37,99,235,0.35);
+}
+
+/* ================= FOOTER ================= */
+.coverage {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+}
+
+/* ================= SUGGESTIONS ================= */
+.suggestions {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+
+  background: #ffffff;
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 40px rgba(15,23,42,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  max-height: 260px;
+  overflow-y: auto;
+
+  padding: 6px;
+  margin: 0;
+
+  list-style: none;
+  display: none;
+  z-index: 20;
+}
+
+/* Show dropdown */
+.suggestions.active {
+  display: block;
+}
+
+/* Item */
+.suggestions li {
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+/* Hover */
+.suggestions li:hover {
+  background: #f1f5f9;
+}
+
+/* Keyboard active */
+.suggestions li.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* Scrollbar (optional polish) */
+.suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+.suggestions::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .popup-card {
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .city-search {
+    height: 52px;
+  }
+}
+
+
+
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 12px;
+}
+
+.modal-box {
+  background: #fff;
+  width: 100%;
+  max-width: 360px;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 18px;
+  color: #0f172a;
+}
+
+/* Close */
+.close-btn {
+  background: #f1f5f9;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  color: #475569;
+}
+
+/* Subtext */
+.modal-subtext {
+  font-size: 13px;
+  color: #64748b;
+  margin: 10px 0 16px;
+}
+
+/* Inputs */
+.modal-box input,
+.modal-box textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Readonly service */
+#serviceType {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+/* Button */
+.modal-box button[type="submit"] {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Trust line */
+.trust-text {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* Confirmation */
+.confirmation-message {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .modal-box {
+    padding: 18px;
+    border-radius: 14px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP FLOATING CONTACT BUTTONS
+   ========================================================= */
+
+#sticky-icon-popup {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  z-index: 9999;
+}
+
+/* Individual button */
+#sticky-icon-popup .icon-btn {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* WhatsApp */
+#sticky-icon-popup .icon-btn.whatsapp {
+  background: #20b957;
+}
+
+/* Call */
+#sticky-icon-popup .icon-btn.call {
+  background: #078f89;
+}
+
+/* Icons */
+#sticky-icon-popup .icon-btn i {
+  font-size: 19px;
+}
+
+/* Hover */
+#sticky-icon-popup .icon-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* Tooltip */
+#sticky-icon-popup .tooltip {
+  position: absolute;
+
+  right: 58px;
+  top: 50%;
+  transform: translateY(-50%) translateX(5px);
+
+  padding: 7px 10px;
+
+  background: #173f46;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  border-radius: 6px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Tooltip arrow */
+#sticky-icon-popup .tooltip::after {
+  content: "";
+
+  position: absolute;
+  right: -5px;
+  top: 50%;
+
+  width: 9px;
+  height: 9px;
+
+  background: #173f46;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Show tooltip */
+#sticky-icon-popup .icon-btn:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+
+/* =========================================================
+   DESKTOP ONLY
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  #sticky-icon-popup {
+    display: none;
+  }
+
+}
+
+
+
+
+/* =========================================================
+   NIVA SURGERY — MOBILE BOTTOM NAVIGATION
+   ========================================================= */
+
+.niva-mobile-bottom-nav {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE ONLY
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .niva-mobile-bottom-nav {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 9999;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+
+    height: 62px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #dfeceb;
+    border-radius: 16px;
+
+    box-shadow:
+      0 8px 28px rgba(23, 63, 70, 0.14);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: 5px;
+  }
+
+
+  .niva-mobile-nav-item {
+    height: 52px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    color: #6f8084;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    transition:
+      color .2s ease,
+      background .2s ease;
+  }
+
+
+  .niva-mobile-nav-item i {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+
+  .niva-mobile-nav-item span {
+    line-height: 1;
+  }
+
+
+  .niva-mobile-nav-item:hover,
+  .niva-mobile-nav-item:active {
+    color: #078f89;
+    background: #f0faf8;
+  }
+
+
+  /* CALL BUTTON */
+
+  .niva-mobile-nav-item.niva-mobile-call {
+    color: #078f89;
+  }
+
+
+  .niva-mobile-nav-item.niva-mobile-call i {
+    font-size: 15px;
+  }
+
+
+  /* Prevent page content from hiding behind navigation */
+
+  body {
+    padding-bottom: 88px;
+  }
+
+
+  /* Hide existing floating buttons on mobile */
+
+  #sticky-icon-popup {
+    display: none !important;
+  }
+
+}
+

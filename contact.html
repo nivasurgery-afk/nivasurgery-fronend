@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Get Assistance - Niva Surgery | Surgical Consultation</title>
+
+  <meta
+    name="description"
+    content="Get assistance from Niva Surgery for surgical consultations, appointments, treatment information and guidance across multiple surgical specialties."
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7faf9;
+      color: #24383d;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e6eeee;
+    }
+
+    .desktop-header {
+      max-width: 1240px;
+      height: 72px;
+      margin: auto;
+      padding: 0 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .lab-name {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+
+    .niva {
+      color: #078f89;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .healthcare {
+      color: #173f46;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 12px;
+    }
+
+    .header-right a {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid #e1eceb;
+      border-radius: 50%;
+
+      color: #078f89;
+      text-decoration: none;
+    }
+
+    .header-right a:hover {
+      background: #078f89;
+      color: #ffffff;
+    }
+
+    .mobile-header {
+      display: none;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .assistance-hero {
+      max-width: 1050px;
+      margin: auto;
+
+      padding: 70px 25px 45px;
+      text-align: center;
+    }
+
+    .assistance-eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+
+      color: #078f89;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .assistance-hero h1 {
+      color: #173f46;
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .assistance-hero p {
+      max-width: 680px;
+      margin: auto;
+
+      color: #718186;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       ASSISTANCE OPTIONS
+    ========================= */
+
+    .assistance-container {
+      width: calc(100% - 50px);
+      max-width: 1050px;
+      margin: 0 auto 75px;
+    }
+
+    .assistance-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 45px;
+    }
+
+    .assistance-card {
+      padding: 25px;
+
+      background: #ffffff;
+      border: 1px solid #e2eceb;
+      border-radius: 12px;
+
+      text-align: center;
+    }
+
+    .assistance-icon {
+      width: 45px;
+      height: 45px;
+      margin: 0 auto 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      background: #eaf7f5;
+
+      color: #078f89;
+      font-size: 17px;
+    }
+
+    .assistance-card h3 {
+      color: #173f46;
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .assistance-card p {
+      color: #718186;
+      font-size: 11px;
+      line-height: 1.65;
+      margin-bottom: 15px;
+    }
+
+    .assistance-card a {
+      color: #078f89;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       MAIN CONTACT AREA
+    ========================= */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-panel {
+      padding: 30px;
+
+      background: #ffffff;
+      border: 1px solid #e2eceb;
+      border-radius: 13px;
+    }
+
+    .contact-panel h2 {
+      color: #173f46;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .contact-panel > p {
+      color: #718186;
+      font-size: 12px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+
+    /* CONTACT ITEMS */
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item-icon {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 8px;
+      background: #eef8f7;
+
+      color: #078f89;
+      font-size: 14px;
+    }
+
+    .contact-item h3 {
+      color: #263e43;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      color: #718186;
+      font-size: 11px;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .contact-item a:hover {
+      color: #078f89;
+    }
+
+
+    /* =========================
+       SURGERY SPECIALTIES
+    ========================= */
+
+    .specialties {
+      margin-top: 25px;
+    }
+
+    .specialties h3 {
+      color: #173f46;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .specialty-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .specialty-list span {
+      padding: 9px 10px;
+
+      background: #f6faf9;
+      border: 1px solid #e4eeee;
+      border-radius: 6px;
+
+      color: #536a6e;
+      font-size: 10px;
+    }
+
+
+    /* =========================
+       ASSISTANCE FORM
+    ========================= */
+
+    .assistance-form {
+      display: grid;
+      gap: 13px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .form-group label {
+      color: #536a6e;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+
+      padding: 11px 12px;
+
+      border: 1px solid #dce8e7;
+      border-radius: 6px;
+
+      outline: none;
+
+      background: #ffffff;
+      color: #263e43;
+
+      font-family: inherit;
+      font-size: 11px;
+    }
+
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #078f89;
+    }
+
+    .submit-btn {
+      margin-top: 5px;
+
+      padding: 12px 20px;
+
+      border: 0;
+      border-radius: 7px;
+
+      background: #078f89;
+      color: #ffffff;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #067b76;
+    }
+
+
+    /* =========================
+       NOTE
+    ========================= */
+
+    .medical-note {
+      margin-top: 18px;
+      padding: 14px;
+
+      background: #f8fbfb;
+      border-left: 3px solid #078f89;
+
+      color: #718186;
+      font-size: 10px;
+      line-height: 1.65;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #173f46;
+      color: #ffffff;
+      padding: 40px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .footer-brand span {
+      color: #62d2cc;
+    }
+
+    .footer-text {
+      max-width: 400px;
+      margin-top: 10px;
+
+      color: #b8cbcd;
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .footer-links a {
+      color: #dce8e9;
+      font-size: 11px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #62d2cc;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .desktop-header {
+        display: none;
+      }
+
+      .mobile-header {
+        height: 64px;
+        padding: 0 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .mobile-header > a {
+        color: #078f89;
+        font-size: 17px;
+      }
+
+      .assistance-hero {
+        padding: 50px 20px 35px;
+      }
+
+      .assistance-hero h1 {
+        font-size: 30px;
+      }
+
+      .assistance-container {
+        width: calc(100% - 30px);
+      }
+
+      .assistance-options {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .specialty-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+
+
+<main>
+
+
+  <section class="assistance-hero">
+
+    <span class="assistance-eyebrow">
+      PATIENT ASSISTANCE
+    </span>
+
+    <h1>
+      How Can We Help You?
+    </h1>
+
+    <p>
+      Whether you need help choosing a surgical specialty, booking a
+      consultation or understanding the next step in your treatment,
+      our team is here to assist you.
+    </p>
+
+  </section>
+
+
+  <section class="assistance-container">
+
+
+    <!-- QUICK OPTIONS -->
+
+    <div class="assistance-options">
+
+
+      <div class="assistance-card">
+
+        <div class="assistance-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+
+        <h3>Call Our Team</h3>
+
+        <p>
+          Speak directly with our team for consultation and
+          appointment assistance.
+        </p>
+
+        <a href="tel:+917892287102">
+          +91 78922 87102
+        </a>
+
+      </div>
+
+
+      <div class="assistance-card">
+
+        <div class="assistance-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+
+        <h3>WhatsApp Assistance</h3>
+
+        <p>
+          Send us your enquiry through WhatsApp and our team
+          can guide you regarding the next step.
+        </p>
+
+        <a
+          href="https://wa.me/917892287102"
+          target="_blank"
+          rel="noopener"
+        >
+          Chat on WhatsApp
+        </a>
+
+      </div>
+
+
+      <div class="assistance-card">
+
+        <div class="assistance-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <h3>Email Assistance</h3>
+
+        <p>
+          Send your questions or appointment requirements
+          to our team by email.
+        </p>
+
+        <a href="mailto:nivasurgery@gmail.com">
+          nivasurgery@gmail.com
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="contact-layout">
+
+
+      <!-- CONTACT INFORMATION -->
+
+      <div class="contact-panel">
+
+        <h2>Patient Assistance</h2>
+
+        <p>
+          Our team can help you understand available surgical
+          specialties, consultation requirements and appointment
+          options.
+        </p>
+
+
+        <div class="contact-item">
+
+          <div class="contact-item-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div>
+
+            <h3>Phone</h3>
+
+            <a href="tel:+917892287102">
+              +91 78922 87102
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-item-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+
+          <div>
+
+            <h3>WhatsApp</h3>
+
+            <a
+              href="https://wa.me/917892287102"
+              target="_blank"
+              rel="noopener"
+            >
+              Chat with Niva Surgery
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-item-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div>
+
+            <h3>Email</h3>
+
+            <a href="mailto:nivasurgery@gmail.com">
+              nivasurgery@gmail.com
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="contact-item-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div>
+
+            <h3>Location</h3>
+
+            <p>
+              1st Floor, Above Vinayaka Hospital,<br>
+              1222, 80 Feet Road,<br>
+              Chandra Layout,<br>
+              Bengaluru, Karnataka 560040
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="specialties">
+
+          <h3>
+            Surgical Specialties
+          </h3>
+
+          <div class="specialty-list">
+
+            <span>Fracture Surgery</span>
+            <span>Orthopedic Surgery</span>
+
+            <span>Oncology Surgery</span>
+            <span>General Surgery</span>
+
+            <span>Obstetrics & Gynecology</span>
+            <span>Hernia Surgery</span>
+
+            <span>Piles Surgery</span>
+            <span>Gallbladder Surgery</span>
+
+            <span>Varicose Veins</span>
+            <span>Breast Surgery</span>
+
+            <span>Gynecomastia Surgery</span>
+            <span>Appendix Surgery</span>
+
+            <span>Laparoscopic Surgery</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ASSISTANCE FORM -->
+
+      <div class="contact-panel">
+
+        <h2>Request Assistance</h2>
+
+        <p>
+          Share your basic details and the type of surgical assistance
+          you are looking for. Our team can help guide you.
+        </p>
+
+
+        <form class="assistance-form">
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="phone">
+                Mobile Number
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your mobile number"
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email address"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="surgery">
+              Surgical Specialty
+            </label>
+
+            <select id="surgery" name="surgery">
+
+              <option value="">
+                Select a specialty
+              </option>
+
+              <option>Fracture Surgery</option>
+              <option>Orthopedic Surgery</option>
+              <option>Oncology Surgery</option>
+              <option>General Surgery</option>
+              <option>Obstetrics & Gynecology</option>
+              <option>Hernia Surgery</option>
+              <option>Piles Surgery</option>
+              <option>Gallbladder Surgery</option>
+              <option>Varicose Veins</option>
+              <option>Breast Surgery</option>
+              <option>Gynecomastia Surgery</option>
+              <option>Appendix Surgery</option>
+              <option>Laparoscopic Surgery</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              How can we help?
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us briefly about your requirement"
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="submit-btn"
+          >
+            Request Assistance
+          </button>
+
+
+        </form>
+
+
+        <div class="medical-note">
+
+          <strong>Important:</strong>
+          This page is for appointment and general assistance.
+          It is not intended for emergency medical care. For urgent
+          medical concerns, please seek immediate medical attention.
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+
+
+</body>
+</html>

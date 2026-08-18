@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Niva Surgery</title>
+  <meta
+    name="description"
+    content=""
+    id="surgeryMetaDescription"
+  >
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="" id="surgeryCanonical">
+
+  <meta property="og:title" content="" id="surgeryOgTitle">
+  <meta property="og:description" content="" id="surgeryOgDescription">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="" id="surgeryOgUrl">
+  <meta property="og:image" content="" id="surgeryOgImage">
+
+  <link rel="stylesheet" href="css/surgery-details.css">
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Surgeries.css">
+  <link rel="stylesheet" href="css/booking.routes.css">
+
+  <link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+  </noscript>
+</head>
+
+<body>
+
+  <header>
+
+  <!-- ================= DESKTOP HEADER ================= -->
+  <div class="desktop-header">
+
+    <!-- LOGO + LOCATION -->
+    <div class="logo-location">
+
+      <div class="logo-section">
+        <div class="lab-name">
+          <span class="niva">Niva</span>
+          <span class="healthcare">surgery</span>
+        </div>
+      </div>
+
+      <div class="location-trigger" id="openLocation">
+        <span class="label">Location</span>
+
+        <span class="city">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+          <span id="selectedCity">Select city</span>
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </span>
+      </div>
+
+    </div>
+
+
+    <!-- ================= NAVIGATION ================= -->
+    <div class="header-actions">
+
+      <!-- HOME -->
+      <a href="index.html" class="header-item">
+        <i class="fas fa-home header-icon"></i>
+        <span class="header-text">Home</span>
+      </a>
+
+
+      <!-- SURGERIES -->
+      <div class="header-item surgery-menu">
+
+        <div class="surgery-menu-trigger">
+          <i class="fas fa-procedures header-icon"></i>
+          <span class="header-text">Surgeries</span>
+          <i class="fas fa-chevron-down surgery-chevron"></i>
+        </div>
+
+
+        <!-- SURGERY DROPDOWN -->
+<div class="surgery-dropdown">
+
+  <div class="surgery-dropdown-header">
+    <span class="dropdown-title">Common Surgeries</span>
+    <span class="dropdown-subtitle">
+      Expert surgical care at Niva Surgery
+    </span>
+  </div>
+
+
+  <div class="surgery-dropdown-list">
+
+    <!-- GYNECOMASTIA -->
+    <a
+      href="surgery-details.html?id=gynecomastia"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-user"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Gynecomastia</strong>
+        <small>Male breast enlargement</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- HERNIA -->
+    <a
+      href="surgery-details.html?id=hernia-surgery"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-procedures"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Hernia</strong>
+        <small>Advanced hernia treatment</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- PILES, FISTULA & FISSURE -->
+    <a
+      href="surgery-details.html?id=piles-surgery"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-heartbeat"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Piles, Fistula &amp; Fissure</strong>
+        <small>Specialized treatment</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- GALLBLADDER -->
+    <a
+      href="surgery-details.html?id=gallbladder-surgery"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-stethoscope"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Gallbladder</strong>
+        <small>Gallstone treatment</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- VARICOSE VEINS -->
+    <a
+      href="surgery-details.html?id=varicose-veins"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-tint"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Varicose Veins</strong>
+        <small>Vein treatment &amp; care</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+  </div>
+
+
+  <!-- VIEW ALL -->
+  <a href="surgeries.html" class="view-all-surgeries">
+    <span>
+      <i class="fas fa-list"></i>
+      View All Surgeries
+    </span>
+
+    <i class="fas fa-arrow-right"></i>
+  </a>
+
+</div>
+
+
+
+      </div>
+
+
+      <!-- SURGEONS -->
+      <a href="surgons.html" class="header-item">
+        <i class="fas fa-user-md header-icon"></i>
+        <span class="header-text">Surgeons</span>
+      </a>
+
+
+      <!-- CONTACT -->
+<a href="tel:+917892287102" class="header-item">
+  <i class="fas fa-phone-alt header-icon"></i>
+  <span class="header-text">+91 78922 87102</span>
+</a>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= MOBILE HEADER ================= -->
+  <div class="mobile-header">
+
+    <div class="logo-section">
+      <div class="lab-name">
+        <span class="niva">Niva</span>
+        <span class="healthcare">surgery</span>
+      </div>
+    </div>
+
+
+    <div class="location-section" id="mobileLocation">
+
+      <i class="fas fa-map-marker-alt location-icon"></i>
+
+      <div class="location-info">
+
+        <span class="label">Your Location</span>
+
+        <span class="city">
+          <span id="mobileSelectedCity">Bangalore</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- MOBILE BOTTOM NAVIGATION -->
+<nav class="niva-mobile-bottom-nav" aria-label="Mobile navigation">
+
+  <a href="index.html" class="niva-mobile-nav-item">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+
+  <a href="surgeries.html" class="niva-mobile-nav-item">
+    <i class="fas fa-procedures"></i>
+    <span>Surgeries</span>
+  </a>
+
+  <a href="surgons.html" class="niva-mobile-nav-item">
+    <i class="fas fa-user-md"></i>
+    <span>Surgeons</span>
+  </a>
+
+  <a href="tel:+917892287102" class="niva-mobile-nav-item niva-mobile-call">
+    <i class="fas fa-phone-alt"></i>
+    <span>Call</span>
+  </a>
+
+</nav>
+
+  <!-- =====================================================
+       MASTER SURGERY PAGE
+  ====================================================== -->
+
+  <main class="surgery-page">
+
+
+    <!-- =====================================================
+         SURGERY HERO
+    ====================================================== -->
+
+    <section class="surgery-hero">
+
+      <div class="surgery-hero-container">
+
+        <!-- LEFT : SURGERY SLIDER -->
+
+        <div class="surgery-hero-media">
+
+          <div class="surgery-hero-slider" id="surgeryHeroSlider">
+
+            <!-- JS inserts slides here -->
+
+          </div>
+
+          <div
+            class="surgery-slider-dots"
+            id="surgerySliderDots">
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT : CONSULTATION FORM -->
+
+        <aside class="surgery-consultation">
+
+          <div class="consultation-header">
+
+            <span class="consultation-label">
+              Surgical Consultation
+            </span>
+
+            <h1 id="surgeryHeroTitle"></h1>
+
+            <p id="surgeryHeroDescription"></p>
+
+          </div>
+
+
+          <form
+            class="consultation-form"
+            id="surgeryConsultationForm"
+          >
+
+            <div class="form-field">
+
+              <label for="patientName">
+                Your Name
+              </label>
+
+<input
+  type="text"
+  id="patientName"
+  name="name"
+  placeholder="Enter your name"
+  autocomplete="name"
+  required
+>
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="patientMobile">
+                Mobile Number
+              </label>
+
+<input
+  type="tel"
+  id="patientMobile"
+  name="mobile"
+  placeholder="Enter mobile number"
+  inputmode="numeric"
+  autocomplete="tel"
+  maxlength="10"
+  required
+>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="consultation-submit"
+            >
+
+              <span>Request Consultation</span>
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+          </form>
+
+<!-- ===== CONSULTATION SUCCESS POPUP ===== -->
+<div id="simplePopup" class="niva-success-popup">
+
+  <div class="niva-success-box">
+
+    <button
+      type="button"
+      class="niva-success-close"
+      onclick="closeSimplePopup()"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <div class="niva-success-icon">
+      ✓
+    </div>
+
+    <h3>Request Received</h3>
+
+    <p>
+      Thank you for contacting Niva Surgery.
+      Our team has received your consultation request
+      and will contact you shortly.
+    </p>
+
+    <button
+      type="button"
+      class="niva-success-button"
+      onclick="closeSimplePopup()"
+    >
+      Done
+    </button>
+
+  </div>
+
+</div>
+          <div class="consultation-note">
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            <span>
+              Your information is kept private and used only
+              to contact you regarding your consultation.
+            </span>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SURGERY INTRODUCTION
+    ====================================================== -->
+
+    <section class="surgery-introduction">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            id="definitionEyebrow">
+          </span>
+
+          <h2 id="definitionTitle"></h2>
+
+          <div
+            class="section-description"
+            id="definitionContent">
+          </div>
+
+        </div>
+
+
+        <div
+          class="condition-grid"
+          id="conditionGrid">
+          <!-- JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHEN SURGERY MAY BE NEEDED
+    ====================================================== -->
+
+    <section class="surgery-treatment-section">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            id="treatmentEyebrow">
+          </span>
+
+          <h2 id="treatmentTitle"></h2>
+
+          <p id="treatmentDescription"></p>
+
+        </div>
+
+
+        <div
+          class="treatment-grid"
+          id="treatmentGrid">
+          <!-- JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SURGERY OPTIONS
+    ====================================================== -->
+
+    <section class="surgery-options-section">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            id="procedureEyebrow">
+          </span>
+
+          <h2 id="procedureTitle"></h2>
+
+          <p id="procedureDescription"></p>
+
+        </div>
+
+
+        <div
+          class="procedure-list"
+          id="procedureList">
+          <!-- JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INSURANCE & EMI
+    ====================================================== -->
+
+    <section class="surgery-finance-section">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            Payment Support
+          </span>
+
+          <h2>
+            Insurance & Payment Options
+          </h2>
+
+          <p>
+            Flexible payment support to help make planned
+            surgical care easier to manage.
+          </p>
+
+        </div>
+
+
+        <div
+          class="finance-slider"
+          id="financeSlider">
+
+          <div
+            class="finance-track"
+            id="financeTrack">
+            <!-- JS -->
+          </div>
+
+        </div>
+
+
+        <div
+          class="finance-dots"
+          id="financeDots">
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PATIENT JOURNEY
+    ====================================================== -->
+
+    <section class="surgery-journey-section">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span
+            class="section-eyebrow"
+            id="journeyEyebrow">
+          </span>
+
+          <h2 id="journeyTitle"></h2>
+
+          <p id="journeyDescription"></p>
+
+        </div>
+
+
+        <div
+          class="journey-list"
+          id="journeyList">
+          <!-- JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHY NIVA SURGERY
+    ====================================================== -->
+
+    <section class="surgery-trust-section">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            Patient-focused care
+          </span>
+
+          <h2 id="trustTitle"></h2>
+
+          <p id="trustDescription"></p>
+
+        </div>
+
+
+        <div
+          class="trust-grid"
+          id="trustGrid">
+          <!-- JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
+
+    <section class="surgery-faq-section">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            Patient Information
+          </span>
+
+          <h2 id="faqTitle">
+          </h2>
+
+          <p id="faqDescription">
+          </p>
+
+        </div>
+
+
+        <div
+          class="surgery-faq-list"
+          id="surgeryFaqList">
+          <!-- JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RELATED SURGERIES
+    ====================================================== -->
+
+    <section class="related-surgeries-section">
+
+      <div class="surgery-content-width">
+
+        <div class="section-heading">
+
+          <span class="section-eyebrow">
+            Explore More
+          </span>
+
+          <h2>
+            Related Surgical Care
+          </h2>
+
+          <p>
+            Explore other surgical procedures available
+            through Niva Surgery.
+          </p>
+
+        </div>
+
+
+        <div
+          class="related-surgery-grid"
+          id="relatedSurgeryGrid">
+          <!-- JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL CONSULTATION CTA
+    ====================================================== -->
+
+    <section class="surgery-final-cta">
+
+      <div class="surgery-content-width">
+
+        <div class="final-cta-inner">
+
+          <div>
+
+            <span
+              class="section-eyebrow"
+              id="ctaEyebrow">
+            </span>
+
+            <h2 id="ctaTitle"></h2>
+
+            <p id="ctaDescription"></p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="final-consultation-button"
+            id="finalConsultationButton">
+
+            Request Consultation
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer class="niva-footer">
+
+  <div class="niva-footer-main">
+
+    <!-- BRAND -->
+    <div class="niva-footer-brand">
+
+      <a href="index.html" class="niva-footer-logo">
+        <span class="niva-footer-name">Niva</span>
+        <span class="niva-footer-type">surgery</span>
+      </a>
+
+      <p class="niva-footer-description">
+        Trusted surgical care focused on experienced specialists,
+        safe procedures, personalised treatment and patient-first support.
+      </p>
+
+      <div class="niva-footer-social">
+
+        <a
+          href="https://www.instagram.com/nivasurgery/"
+          aria-label="Niva Surgery on Instagram"
+          target="_blank"
+          rel="noopener">
+          <img
+            src="images/instagram.webp"
+            alt="Niva Surgery Instagram"
+            width="22"
+            height="22"
+            loading="lazy">
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61583126009241"
+          aria-label="Niva Surgery on Facebook"
+          target="_blank"
+          rel="noopener">
+          <img
+            src="images/facebook.webp"
+            alt="Niva Surgery Facebook"
+            width="22"
+            height="22"
+            loading="lazy">
+        </a>
+
+        <a
+          href="https://www.youtube.com/@nivasurgery"
+          aria-label="Niva Surgery on YouTube"
+          target="_blank"
+          rel="noopener">
+          <img
+            src="images/youtube.webp"
+            alt="Niva Surgery YouTube"
+            width="22"
+            height="22"
+            loading="lazy">
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- COMPANY -->
+    <div class="niva-footer-column">
+
+      <h3>Company</h3>
+
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Niva Surgery</a>
+      <a href="locate-us.html">Locate Us</a>
+
+    </div>
+
+
+    <!-- SURGICAL CARE -->
+    <div class="niva-footer-column">
+
+      <h3>Surgical Care</h3>
+
+      <a href="surgeries.html">All Surgeries</a>
+      <a href="surgons.html">Our Surgeons</a>
+
+
+
+    </div>
+
+
+    <!-- PATIENT SUPPORT -->
+    <div class="niva-footer-column">
+
+      <h3>Patient Support</h3>
+
+      <a href="surgeries.html">Explore Surgeries</a>
+      <a href="faq.html">FAQs</a>
+      <a href="contact.html">Get Assistance</a>
+
+    </div>
+
+
+    <!-- LEGAL -->
+    <div class="niva-footer-column">
+
+      <h3>Information</h3>
+
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="refund-policy.html">Refund Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+
+    </div>
+
+  </div>
+
+
+  <!-- SURGERY SEO AREA -->
+
+  <div class="niva-footer-seo">
+
+    <div class="niva-footer-seo-item">
+
+      <h3>Surgical Care at Niva Surgery</h3>
+
+      <p>
+        Niva Surgery provides access to specialised surgical care,
+        experienced surgeons, planned procedures and personalised
+        patient support across different surgical specialties.
+      </p>
+
+    </div>
+
+
+    <div class="niva-footer-seo-item">
+
+      <h3>Our Surgical Specialties</h3>
+
+      <p>
+        Explore general surgery, orthopaedic surgery, fracture care,
+        oncology surgery, obstetrics and gynecology procedures and
+        other specialised surgical treatments.
+      </p>
+
+    </div>
+
+
+    <div class="niva-footer-seo-item">
+
+      <h3>Find a Surgeon</h3>
+
+      <p>
+        Connect with experienced surgical specialists for consultation,
+        diagnosis, treatment planning and guidance about the next step
+        in your surgical journey.
+      </p>
+
+    </div>
+
+
+    <div class="niva-footer-seo-item">
+
+      <h3>Patient-Focused Surgical Care</h3>
+
+      <p>
+        From your first consultation through treatment and recovery,
+        Niva Surgery focuses on clear communication, clinical care,
+        safety and a comfortable patient experience.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="niva-footer-bottom">
+
+    <p>
+      © 2026 Niva Surgery. All rights reserved.
+      <span>An initiative by Vinayaka Hospital.</span>
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+
+  <!-- =====================================================
+       MASTER SURGERY JAVASCRIPT
+  ====================================================== -->
+
+  <script src="javascript/surgery-master.js"></script>
+    <script src="javascript/script.js"></script>
+  <script src="javascript/location.js"></script>
+  <script src="javascript/booking.controller.js"></script>
+  <script src="javascript/surgery-master.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Surgeries | Niva Surgery</title>
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Surgeries.css">
+  <link rel="stylesheet" href="css/booking.routes.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <header>
+
+  <!-- ================= DESKTOP HEADER ================= -->
+  <div class="desktop-header">
+
+    <!-- LOGO + LOCATION -->
+    <div class="logo-location">
+
+      <div class="logo-section">
+        <div class="lab-name">
+          <span class="niva">Niva</span>
+          <span class="healthcare">surgery</span>
+        </div>
+      </div>
+
+      <div class="location-trigger" id="openLocation">
+        <span class="label">Location</span>
+
+        <span class="city">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+          <span id="selectedCity">Select city</span>
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </span>
+      </div>
+
+    </div>
+
+
+    <!-- ================= NAVIGATION ================= -->
+    <div class="header-actions">
+
+      <!-- HOME -->
+      <a href="index.html" class="header-item">
+        <i class="fas fa-home header-icon"></i>
+        <span class="header-text">Home</span>
+      </a>
+
+
+      <!-- SURGERIES -->
+      <div class="header-item surgery-menu">
+
+        <div class="surgery-menu-trigger">
+          <i class="fas fa-procedures header-icon"></i>
+          <span class="header-text">Surgeries</span>
+          <i class="fas fa-chevron-down surgery-chevron"></i>
+        </div>
+
+
+        <!-- SURGERY DROPDOWN -->
+<div class="surgery-dropdown">
+
+  <div class="surgery-dropdown-header">
+    <span class="dropdown-title">Common Surgeries</span>
+    <span class="dropdown-subtitle">
+      Expert surgical care at Niva Surgery
+    </span>
+  </div>
+
+
+  <div class="surgery-dropdown-list">
+
+    <!-- GYNECOMASTIA -->
+    <a
+      href="surgery-details.html?id=gynecomastia"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-user"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Gynecomastia</strong>
+        <small>Male breast enlargement</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- HERNIA -->
+    <a
+      href="surgery-details.html?id=hernia-surgery"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-procedures"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Hernia</strong>
+        <small>Advanced hernia treatment</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- PILES, FISTULA & FISSURE -->
+    <a
+      href="surgery-details.html?id=piles-surgery"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-heartbeat"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Piles, Fistula &amp; Fissure</strong>
+        <small>Specialized treatment</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- GALLBLADDER -->
+    <a
+      href="surgery-details.html?id=gallbladder-surgery"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-stethoscope"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Gallbladder</strong>
+        <small>Gallstone treatment</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+
+    <!-- VARICOSE VEINS -->
+    <a
+      href="surgery-details.html?id=varicose-veins"
+      class="surgery-dropdown-item"
+    >
+      <span class="surgery-dropdown-icon">
+        <i class="fas fa-tint"></i>
+      </span>
+
+      <span class="surgery-dropdown-content">
+        <strong>Varicose Veins</strong>
+        <small>Vein treatment &amp; care</small>
+      </span>
+
+      <i class="fas fa-chevron-right surgery-arrow"></i>
+    </a>
+
+  </div>
+
+
+  <!-- VIEW ALL -->
+  <a href="surgeries.html" class="view-all-surgeries">
+    <span>
+      <i class="fas fa-list"></i>
+      View All Surgeries
+    </span>
+
+    <i class="fas fa-arrow-right"></i>
+  </a>
+
+</div>
+
+
+
+      </div>
+
+
+      <!-- SURGEONS -->
+      <a href="surgons.html" class="header-item">
+        <i class="fas fa-user-md header-icon"></i>
+        <span class="header-text">Surgeons</span>
+      </a>
+
+
+      <!-- CONTACT -->
+<a href="tel:+917892287102" class="header-item">
+  <i class="fas fa-phone-alt header-icon"></i>
+  <span class="header-text">+91 78922 87102</span>
+</a>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= MOBILE HEADER ================= -->
+  <div class="mobile-header">
+
+    <div class="logo-section">
+      <div class="lab-name">
+        <span class="niva">Niva</span>
+        <span class="healthcare">surgery</span>
+      </div>
+    </div>
+
+
+    <div class="location-section" id="mobileLocation">
+
+      <i class="fas fa-map-marker-alt location-icon"></i>
+
+      <div class="location-info">
+
+        <span class="label">Your Location</span>
+
+        <span class="city">
+          <span id="mobileSelectedCity">Bangalore</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- MOBILE BOTTOM NAVIGATION -->
+<nav class="niva-mobile-bottom-nav" aria-label="Mobile navigation">
+
+  <a href="index.html" class="niva-mobile-nav-item">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+
+  <a href="surgeries.html" class="niva-mobile-nav-item">
+    <i class="fas fa-procedures"></i>
+    <span>Surgeries</span>
+  </a>
+
+  <a href="surgons.html" class="niva-mobile-nav-item">
+    <i class="fas fa-user-md"></i>
+    <span>Surgeons</span>
+  </a>
+
+  <a href="tel:+917892287102" class="niva-mobile-nav-item niva-mobile-call">
+    <i class="fas fa-phone-alt"></i>
+    <span>Call</span>
+  </a>
+
+</nav>
+
+
+
+  <main class="surgery-list-page">
+
+    <!-- PAGE INTRO -->
+
+    <section class="surgery-list-intro">
+
+      <span class="surgery-list-eyebrow">
+        <i class="fas fa-procedures"></i>
+        Surgical Specialties
+      </span>
+
+      <h1>Our Surgical Expertise</h1>
+
+      <p>
+        Specialist-led surgical care across a wide range of treatment areas,
+        with clear diagnosis, personalised treatment planning and recovery-focused care.
+      </p>
+
+    </section>
+
+
+    <!-- SURGERY GRID -->
+
+    <section class="surgery-list-grid">
+
+
+      <!-- 01 FRACTURE -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/fracture1.png"
+            alt="Fracture Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">01</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            Orthopaedic
+          </span>
+
+          <h2>Fracture Surgery</h2>
+
+          <p>
+            Surgical treatment for fractures of the wrist, ankle and long bones
+            with recovery-focused care.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=fracture-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Fracture Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 02 ORTHOPEDIC -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/surgeryorthopedic.png"
+            alt="Orthopedic Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">02</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            Orthopaedic
+          </span>
+
+          <h2>Orthopedic Surgery</h2>
+
+          <p>
+            Joint replacement, ligament repair and other bone, joint and spine
+            surgical procedures.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=orthopedic-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Orthopedic Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 03 ONCOLOGY -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/surgeryonco.png"
+            alt="Oncology Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">03</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            Oncology
+          </span>
+
+          <h2>Oncology Surgery</h2>
+
+          <p>
+            Surgical management of tumors and cancer-related conditions with
+            specialist-led treatment planning.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=oncology-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Oncology Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 04 GENERAL SURGERY -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/gs.png"
+            alt="General Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">04</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            General Surgery
+          </span>
+
+          <h2>General Surgery</h2>
+
+          <p>
+            Hernia repair, appendectomy, biopsy and other commonly performed
+            surgical procedures.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=general-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('General Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 05 OBG -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/obg.webp"
+            alt="Obstetrics and Gynecology"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">05</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            Women's Health
+          </span>
+
+          <h2>Obstetrics &amp; Gynecology</h2>
+
+          <p>
+            Women's surgical and gynecological care including hysterectomy
+            and other specialist procedures.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=obstetrics-gynecology"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Obstetrics & Gynecology')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 06 HERNIA -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/hernia1.png"
+            alt="Hernia Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">06</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            General Surgery
+          </span>
+
+          <h2>Hernia Surgery</h2>
+
+          <p>
+            Evaluation and surgical treatment planning for different types
+            of abdominal wall hernias.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=hernia-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Hernia Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 07 PILES -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/p1.png"
+            alt="Piles Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">07</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            Proctology
+          </span>
+
+          <h2>Piles Surgery</h2>
+
+          <p>
+            Specialist evaluation and treatment planning for piles and
+            related anorectal conditions.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=piles-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Piles Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 10 GALLBLADDER -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/gul1.png"
+            alt="Gallbladder Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">08</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            General Surgery
+          </span>
+
+          <h2>Gallbladder Surgery</h2>
+
+          <p>
+            Surgical evaluation and treatment for gallbladder conditions
+            including symptomatic gallstones.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=gallbladder-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Gallbladder Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 11 VARICOSE VEINS -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/var2.png"
+            alt="Varicose Veins Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">09</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            Vascular Surgery
+          </span>
+
+          <h2>Varicose Veins</h2>
+
+          <p>
+            Evaluation and treatment planning for enlarged veins,
+            leg discomfort and related venous conditions.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=varicose-veins"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Varicose Veins')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 12 BREAST SURGERY -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/bs.png"
+            alt="Breast Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">10</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            General Surgery
+          </span>
+
+          <h2>Breast Surgery</h2>
+
+          <p>
+            Specialist evaluation and surgical care for selected breast
+            conditions and related concerns.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=breast-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Breast Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 13 GYNECOMASTIA -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/gyno1.png"
+            alt="Gynecomastia Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">11</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            General Surgery
+          </span>
+
+          <h2>Gynecomastia Surgery</h2>
+
+          <p>
+            Surgical evaluation and treatment for enlarged male breast
+            tissue when clinically appropriate.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=gynecomastia"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Gynecomastia Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 14 APPENDIX -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/app.png"
+            alt="Appendix Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">12</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            General Surgery
+          </span>
+
+          <h2>Appendix Surgery</h2>
+
+          <p>
+            Evaluation and surgical management of suspected appendicitis
+            and related appendix conditions.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=Appendix Surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Appendix Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- 15 LAPAROSCOPIC -->
+
+      <article class="surgery-list-card">
+
+        <div class="surgery-list-image">
+
+          <img
+            src="images/surgery/lap.png"
+            alt="Laparoscopic Surgery"
+            loading="lazy"
+          >
+
+          <span class="surgery-list-number">13</span>
+
+        </div>
+
+        <div class="surgery-list-content">
+
+          <span class="surgery-list-category">
+            Minimally Invasive
+          </span>
+
+          <h2>Laparoscopic Surgery</h2>
+
+          <p>
+            Minimally invasive surgical approaches used for selected
+            abdominal and general surgical conditions.
+          </p>
+
+          <div class="surgery-list-actions">
+
+            <a
+              href="surgery-details.html?id=laparoscopic-surgery"
+              class="surgery-list-details"
+            >
+              View Details
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <button
+              type="button"
+              onclick="openBooking('Laparoscopic Surgery')"
+              class="surgery-list-book"
+            >
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </section>
+
+  </main>
+
+
+
+<section class="niva-care-path">
+
+  <div class="niva-care-intro">
+
+    <span class="niva-care-kicker">
+      YOUR SURGERY CARE PATH
+    </span>
+
+    <h2>
+      We guide you through every step
+    </h2>
+
+    <p>
+      From your first consultation to recovery, our team stays
+      with you throughout your surgical journey.
+    </p>
+
+  </div>
+
+
+  <div class="niva-care-steps">
+
+
+    <!-- 01 -->
+
+    <article class="niva-care-step">
+
+      <div class="niva-care-number">
+        01
+      </div>
+
+      <div class="niva-care-body">
+
+        <span class="niva-care-step-label">
+          Before Surgery
+        </span>
+
+        <h3>
+          Meet Your Surgeon
+        </h3>
+
+        <p>
+          Discuss your health concerns with our surgical specialist
+          and understand the treatment options available to you.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 02 -->
+
+    <article class="niva-care-step">
+
+      <div class="niva-care-number">
+        02
+      </div>
+
+      <div class="niva-care-body">
+
+        <span class="niva-care-step-label">
+          Understanding Your Condition
+        </span>
+
+        <h3>
+          Diagnosis & Treatment Plan
+        </h3>
+
+        <p>
+          Your condition is carefully assessed and your surgeon
+          explains the recommended procedure and next steps.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 03 -->
+
+    <article class="niva-care-step">
+
+      <div class="niva-care-number">
+        03
+      </div>
+
+      <div class="niva-care-body">
+
+        <span class="niva-care-step-label">
+          Getting Ready
+        </span>
+
+        <h3>
+          Prepare For Your Surgery
+        </h3>
+
+        <p>
+          Our team explains everything you need to know before
+          surgery, including preparation, admission and safety checks.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 04 -->
+
+    <article class="niva-care-step niva-care-highlight">
+
+      <div class="niva-care-number">
+        04
+      </div>
+
+      <div class="niva-care-body">
+
+        <span class="niva-care-step-label">
+          Treatment Day
+        </span>
+
+        <h3>
+          Your Surgery
+        </h3>
+
+        <p>
+          Your planned procedure is performed by the surgical team
+          with appropriate clinical and patient-safety protocols.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 05 -->
+
+    <article class="niva-care-step">
+
+      <div class="niva-care-number">
+        05
+      </div>
+
+      <div class="niva-care-body">
+
+        <span class="niva-care-step-label">
+          After Surgery
+        </span>
+
+        <h3>
+          Recovery & Follow-up
+        </h3>
+
+        <p>
+          Receive post-surgery guidance and follow-up care to
+          support your recovery after leaving the hospital.
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+
+
+<section class="niva-review-strip">
+
+  <div class="niva-review-slider">
+
+    <div class="niva-review-track">
+
+      <article class="niva-review-card">
+        <div class="niva-review-top">
+          <span class="niva-review-avatar">R</span>
+          <div>
+            <strong>Rahul S.</strong>
+            <span>Patient</span>
+          </div>
+        </div>
+
+        <div class="niva-review-rating">★★★★★</div>
+
+        <p>
+          Very professional doctors and supportive staff.
+          The entire surgery process was explained clearly.
+        </p>
+      </article>
+
+
+      <article class="niva-review-card">
+        <div class="niva-review-top">
+          <span class="niva-review-avatar">A</span>
+          <div>
+            <strong>Ananya R.</strong>
+            <span>Patient</span>
+          </div>
+        </div>
+
+        <div class="niva-review-rating">★★★★★</div>
+
+        <p>
+          Excellent care and a smooth hospital experience.
+          The team was very helpful throughout.
+        </p>
+      </article>
+
+
+      <article class="niva-review-card">
+        <div class="niva-review-top">
+          <span class="niva-review-avatar">V</span>
+          <div>
+            <strong>Vikram M.</strong>
+            <span>Patient</span>
+          </div>
+        </div>
+
+        <div class="niva-review-rating">★★★★★</div>
+
+        <p>
+          Caring doctors and clear guidance before and
+          after the procedure. Highly recommended.
+        </p>
+      </article>
+
+
+      <article class="niva-review-card">
+        <div class="niva-review-top">
+          <span class="niva-review-avatar">P</span>
+          <div>
+            <strong>Priya K.</strong>
+            <span>Patient</span>
+          </div>
+        </div>
+
+        <div class="niva-review-rating">★★★★★</div>
+
+        <p>
+          A comfortable experience with attentive doctors
+          and staff who answered all our questions.
+        </p>
+      </article>
+
+
+      <!-- DUPLICATE FOR CONTINUOUS CSS SLIDE -->
+
+      <article class="niva-review-card">
+        <div class="niva-review-top">
+          <span class="niva-review-avatar">R</span>
+          <div>
+            <strong>Rahul S.</strong>
+            <span>Patient</span>
+          </div>
+        </div>
+
+        <div class="niva-review-rating">★★★★★</div>
+
+        <p>
+          Very professional doctors and supportive staff.
+          The entire surgery process was explained clearly.
+        </p>
+      </article>
+
+
+      <article class="niva-review-card">
+        <div class="niva-review-top">
+          <span class="niva-review-avatar">A</span>
+          <div>
+            <strong>Ananya R.</strong>
+            <span>Patient</span>
+          </div>
+        </div>
+
+        <div class="niva-review-rating">★★★★★</div>
+
+        <p>
+          Excellent care and a smooth hospital experience.
+          The team was very helpful throughout.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+
+  <div class="niva-review-about">
+
+    <span>NIVA SURGERY</span>
+
+    <h2>
+      Care you can feel confident about.
+    </h2>
+
+    <p>
+      Experienced surgical specialists, thoughtful treatment
+      planning and patient-focused care at every stage.
+    </p>
+
+    <div class="niva-review-google">
+      <strong>Google Reviews</strong>
+      <b>★★★★★</b>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div id="sticky-icon-popup">
+
+  <a href="https://wa.me/+917892287102" target="_blank" class="icon-btn whatsapp" aria-label="Chat on WhatsApp" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">WhatsApp</span>
+  </a>
+
+  <a href="tel:+917892287102" class="icon-btn call" aria-label="Call Support" rel="noopener">
+    <i class="fas fa-phone-alt"></i>
+    <span class="tooltip">Call Support</span>
+  </a>
+
+</div>
+
+<section class="niva-surgery-faq">
+
+  <div class="niva-faq-heading">
+
+    <span>SURGICAL INFORMATION</span>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <p>
+      Find answers to common questions about our surgical specialties,
+      procedures, treatment planning and recovery.
+    </p>
+
+  </div>
+
+
+  <div class="niva-faq-list">
+
+
+    <!-- 01 FRACTURE SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">01</span>
+
+        <strong>
+          What is fracture surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Fracture surgery involves surgical treatment of selected
+          broken bones, including fractures of the wrist, ankle and
+          long bones. Your orthopaedic surgeon will assess the fracture
+          and recommend the appropriate treatment.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 02 ORTHOPEDIC SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">02</span>
+
+        <strong>
+          What conditions are treated with orthopedic surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Orthopedic surgery may include procedures for joints, bones,
+          ligaments and spine-related conditions. Treatment options can
+          include joint replacement, ligament repair and other surgical
+          procedures depending on the patient's condition.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 03 ONCOLOGY SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">03</span>
+
+        <strong>
+          What is oncology surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Oncology surgery involves the surgical management of tumors
+          and selected cancer-related conditions. Treatment planning
+          is based on the type and location of the condition and the
+          patient's overall clinical assessment.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 04 GENERAL SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">04</span>
+
+        <strong>
+          What procedures are included in general surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          General surgery may include procedures such as hernia repair,
+          appendectomy, biopsy and other commonly performed surgical
+          procedures. The recommended procedure depends on the patient's
+          condition and clinical evaluation.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 05 OBSTETRICS & GYNECOLOGY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">05</span>
+
+        <strong>
+          What conditions are treated under Obstetrics & Gynecology?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Obstetrics and gynecology surgical care includes evaluation
+          and treatment of selected women's health conditions. Procedures
+          may include hysterectomy and other specialist gynecological
+          surgeries based on individual clinical needs.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 06 HERNIA SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">06</span>
+
+        <strong>
+          What is hernia surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Hernia surgery is performed to treat selected abdominal wall
+          hernias. Your surgeon will evaluate the type, location and
+          symptoms of the hernia before recommending the appropriate
+          treatment approach.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 07 PILES SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">07</span>
+
+        <strong>
+          When may piles require surgical treatment?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Piles may require specialist evaluation when symptoms are
+          persistent, troublesome or do not improve with appropriate
+          conservative treatment. Your surgeon will assess the condition
+          and discuss suitable treatment options.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 08 GALLBLADDER SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">08</span>
+
+        <strong>
+          What is gallbladder surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Gallbladder surgery is used for selected gallbladder conditions,
+          including symptomatic gallstones. A surgeon will review your
+          symptoms and investigations before recommending treatment.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 09 VARICOSE VEINS -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">09</span>
+
+        <strong>
+          What are varicose veins and when should they be evaluated?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Varicose veins are enlarged veins that may be associated with
+          leg discomfort and other symptoms. A specialist can evaluate
+          your symptoms and determine whether further treatment or
+          intervention is appropriate.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 10 BREAST SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">10</span>
+
+        <strong>
+          When should a breast condition be evaluated by a surgeon?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          A new or persistent breast lump, unexplained breast changes
+          or other concerning symptoms should be evaluated by a qualified
+          healthcare professional. Further investigations or surgical
+          treatment may be recommended depending on the findings.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 11 GYNECOMASTIA -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">11</span>
+
+        <strong>
+          What is gynecomastia surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Gynecomastia surgery is a procedure used to treat enlarged
+          male breast tissue when surgical treatment is clinically
+          appropriate. A surgeon will assess the condition before
+          discussing treatment options.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 12 APPENDIX SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">12</span>
+
+        <strong>
+          What is appendix surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Appendix surgery, also known as appendectomy, involves removal
+          of the appendix when surgical treatment is indicated. Suspected
+          appendicitis requires timely medical assessment.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- 13 LAPAROSCOPIC SURGERY -->
+    <div class="niva-faq-item">
+
+      <button class="niva-faq-question" type="button">
+
+        <span class="niva-faq-number">13</span>
+
+        <strong>
+          What is laparoscopic surgery?
+        </strong>
+
+        <span class="niva-faq-toggle">+</span>
+
+      </button>
+
+      <div class="niva-faq-answer">
+        <p>
+          Laparoscopic surgery uses small incisions and specialized
+          instruments for selected surgical procedures. It may be used
+          for certain abdominal and general surgical conditions when
+          clinically suitable.
+        </p>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<footer class="niva-footer">
+
+  <div class="niva-footer-main">
+
+    <!-- BRAND -->
+    <div class="niva-footer-brand">
+
+      <a href="index.html" class="niva-footer-logo">
+        <span class="niva-footer-name">Niva</span>
+        <span class="niva-footer-type">surgery</span>
+      </a>
+
+      <p class="niva-footer-description">
+        Trusted surgical care focused on experienced specialists,
+        safe procedures, personalised treatment and patient-first support.
+      </p>
+
+      <div class="niva-footer-social">
+
+        <a
+          href="https://www.instagram.com/nivasurgery/"
+          aria-label="Niva Surgery on Instagram"
+          target="_blank"
+          rel="noopener">
+          <img
+            src="images/instagram.webp"
+            alt="Niva Surgery Instagram"
+            width="22"
+            height="22"
+            loading="lazy">
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61583126009241"
+          aria-label="Niva Surgery on Facebook"
+          target="_blank"
+          rel="noopener">
+          <img
+            src="images/facebook.webp"
+            alt="Niva Surgery Facebook"
+            width="22"
+            height="22"
+            loading="lazy">
+        </a>
+
+        <a
+          href="https://www.youtube.com/@nivasurgery"
+          aria-label="Niva Surgery on YouTube"
+          target="_blank"
+          rel="noopener">
+          <img
+            src="images/youtube.webp"
+            alt="Niva Surgery YouTube"
+            width="22"
+            height="22"
+            loading="lazy">
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- COMPANY -->
+    <div class="niva-footer-column">
+
+      <h3>Company</h3>
+
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Niva Surgery</a>
+      <a href="locate-us.html">Locate Us</a>
+
+    </div>
+
+
+    <!-- SURGICAL CARE -->
+    <div class="niva-footer-column">
+
+      <h3>Surgical Care</h3>
+
+      <a href="surgeries.html">All Surgeries</a>
+      <a href="surgons.html">Our Surgeons</a>
+
+
+
+    </div>
+
+
+    <!-- PATIENT SUPPORT -->
+    <div class="niva-footer-column">
+
+      <h3>Patient Support</h3>
+
+      <a href="surgeries.html">Explore Surgeries</a>
+      <a href="faq.html">FAQs</a>
+      <a href="contact.html">Get Assistance</a>
+
+    </div>
+
+
+    <!-- LEGAL -->
+    <div class="niva-footer-column">
+
+      <h3>Information</h3>
+
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="refund-policy.html">Refund Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+
+    </div>
+
+  </div>
+
+
+  <!-- SURGERY SEO AREA -->
+<div class="niva-footer-seo">
+
+  <div class="niva-footer-seo-item">
+
+    <h3>Surgical Care at Niva Surgery</h3>
+
+    <p>
+      Niva Surgery provides planned surgical care across orthopaedic,
+      general surgery, oncology, women's health, proctology and vascular
+      specialties. Patients receive consultation, evaluation, treatment
+      planning and recovery-focused support.
+    </p>
+
+  </div>
+
+
+  <div class="niva-footer-seo-item">
+
+    <h3>Orthopaedic & Fracture Surgery</h3>
+
+    <p>
+      Our orthopaedic surgical services include fracture surgery,
+      orthopaedic procedures, joint-related surgery, ligament repair and
+      selected bone, joint and spine conditions. Treatment is planned
+      according to the patient's condition and clinical requirements.
+    </p>
+
+  </div>
+
+
+  <div class="niva-footer-seo-item">
+
+    <h3>General & Laparoscopic Surgery</h3>
+
+    <p>
+      Niva Surgery provides surgical evaluation for hernia, appendix,
+      gallbladder, breast and other general surgical conditions. Selected
+      procedures may be performed using minimally invasive laparoscopic
+      techniques when clinically appropriate.
+    </p>
+
+  </div>
+
+
+  <div class="niva-footer-seo-item">
+
+    <h3>Specialised Surgical Care</h3>
+
+    <p>
+      Our surgical network also covers oncology surgery, obstetrics and
+      gynecology, piles surgery, varicose veins and gynecomastia surgery.
+      Each patient receives specialist evaluation and a treatment plan
+      based on their individual needs.
+    </p>
+
+  </div>
+
+</div>
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="niva-footer-bottom">
+
+    <p>
+      © 2026 Niva Surgery. All rights reserved.
+      <span>An initiative by Vinayaka Hospital.</span>
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+
+
+
+<!-- ===== BOOKING MODAL ===== -->
+<div id="bookingModal" class="booking-modal">
+
+  <div class="booking-box">
+
+    <!-- Close -->
+    <button
+      type="button"
+      class="booking-close"
+      onclick="closeBooking()"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <!-- Booking Heading -->
+    <div class="booking-heading">
+      <h3>Book Your Appointment</h3>
+      <p>Enter your details and we’ll contact you shortly.</p>
+    </div>
+
+    <!-- Mobile Number -->
+    <div class="booking-field">
+      <label for="bookingMobile">Mobile Number</label>
+
+      <input
+        type="tel"
+        id="bookingMobile"
+        placeholder="Enter 10-digit mobile number"
+        maxlength="10"
+        inputmode="numeric"
+      >
+    </div>
+
+    <!-- Name -->
+    <div class="booking-field">
+      <label for="custName">Your Name</label>
+
+      <input
+        type="text"
+        id="custName"
+        placeholder="Enter your name"
+      >
+    </div>
+
+    <!-- Address -->
+    <div class="booking-field">
+      <label for="custAddress">Address</label>
+
+      <textarea
+        id="custAddress"
+        rows="3"
+        placeholder="Enter your address"
+      ></textarea>
+    </div>
+
+    <!-- Service -->
+    <div class="booking-field">
+      <label for="serviceType">Service</label>
+
+      <input
+        type="text"
+        id="serviceType"
+        value="Health Checkup"
+        readonly
+      >
+    </div>
+
+<!-- Confirm Booking --> 
+<button 
+  type="button" 
+  class="primary-btn" 
+  onclick="confirmBooking()" 
+> 
+  Confirm Booking 
+</button>
+
+
+<!-- ===== BOOKING SUCCESS ===== -->
+<div id="bookingSuccess" class="booking-success">
+
+  <div class="booking-success-icon">
+    <i class="fas fa-check"></i>
+  </div>
+
+  <h3>Booking Confirmed</h3>
+
+  <p>
+    Your appointment request has been received successfully.
+    Our team will contact you shortly.
+  </p>
+
+  <button
+    type="button"
+    class="booking-success-btn"
+    onclick="closeBooking()"
+  >
+    Done
+  </button>
+
+</div>
+
+
+
+  </div>
+</div>
+
+  <script src="javascript/script.js"></script>
+  <script src="javascript/location.js"></script>
+  <script src="javascript/booking.controller.js"></script>
+  <script src="javascript/surgery-master.js"></script>
+
+
+  <script>
+    function openBooking(serviceName) {
+
+      if (typeof window.openBooking === "function" &&
+          window.openBooking !== openBooking) {
+
+        window.openBooking(serviceName);
+        return;
+      }
+
+      window.dispatchEvent(
+        new CustomEvent("openBooking", {
+          detail: {
+            service: serviceName
+          }
+        })
+      );
+
+    }
+  </script>
+
+</body>
+</html>
