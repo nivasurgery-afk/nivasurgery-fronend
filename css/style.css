@@ -1341,9 +1341,24 @@ header {
     min-width: 100%;
   }
 
-  .niva-surgery-image {
-    height: 175px;
-  }
+.niva-surgery-image {
+  height: auto;
+  max-height: 190px;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf6f5;
+}
+
+.niva-surgery-image img {
+  width: 100%;
+  height: auto;
+  max-height: 190px;
+  display: block;
+  object-fit: contain;
+}
 
   .niva-surgery-details h3 {
     font-size: 18px;
