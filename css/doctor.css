@@ -1,901 +1,1090 @@
 /* =========================================================
-   NIVA SURGERY
-   MEDICAL TEAM PAGE
-   ========================================================= */
-
-:root {
-  --team-primary: #159fa2;
-  --team-primary-dark: #087b7e;
-
-  --team-dark: #17383f;
-  --team-text: #40545a;
-  --team-muted: #7b8b90;
-
-  --team-bg: #f6fafb;
-  --team-white: #ffffff;
-
-  --team-border: #e3edef;
-
-  --team-radius: 18px;
-
-  --team-shadow:
-    0 16px 40px rgba(23, 56, 63, 0.07);
-}
+   NIVA SURGERY — DOCTORS PAGE
+   Complete doctor.css replacement
+========================================================= */
 
 
 /* =========================================================
-   RESET
-   ========================================================= */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--team-bg);
-  color: var(--team-text);
-
-  font-family:
-    Inter,
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  -webkit-font-smoothing: antialiased;
-}
-
-button,
-input,
-textarea {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-
-/* =========================================================
-   MAIN
-   ========================================================= */
+   PAGE
+========================================================= */
 
 .niva-medical-team {
   width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
 }
 
 
 /* =========================================================
    INTRO
-   ========================================================= */
+========================================================= */
 
 .niva-medical-intro {
-  padding: 58px 0 46px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f5fbfc 0%,
-      #ffffff 58%,
-      #f5fafb 100%
-    );
-
-  border-bottom: 1px solid var(--team-border);
+  width: 100%;
+  padding: 42px 0 34px;
 }
 
-
 .niva-medical-intro-inner {
-  width: min(1180px, calc(100% - 48px));
-
-  margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 40px;
 }
-
 
 .niva-medical-intro-copy {
   max-width: 720px;
 }
-
 
 .niva-medical-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 
-  color: var(--team-primary);
-
-  font-size: 11px;
-  font-weight: 800;
-
-  letter-spacing: 1.2px;
+  color: #54777d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-
 
 .niva-medical-eyebrow i {
   font-size: 13px;
 }
 
+.niva-medical-intro-copy h1 {
+  margin: 0 0 10px;
 
-.niva-medical-intro h1 {
-  margin: 0;
-
-  color: var(--team-dark);
-
-  font-size: clamp(34px, 4vw, 48px);
-  line-height: 1.08;
-
-  letter-spacing: -1.5px;
+  color: #17383f;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
-
 
 .niva-medical-intro-copy p {
   max-width: 650px;
+  margin: 0;
 
-  margin: 16px 0 0;
-
-  color: var(--team-muted);
-
+  color: #667d82;
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 
 /* =========================================================
    INTRO BADGE
-   ========================================================= */
+========================================================= */
 
 .niva-medical-intro-badge {
-  min-width: 255px;
-
-  padding: 17px 20px;
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 12px;
 
-  background: rgba(255, 255, 255, 0.85);
+  padding: 14px 18px;
 
-  border: 1px solid var(--team-border);
-  border-radius: 14px;
-
-  box-shadow:
-    0 12px 30px rgba(23, 56, 63, 0.05);
+  background: #f7fbfb;
+  border: 1px solid #e0ebed;
+  border-radius: 10px;
 }
 
-
 .niva-medical-badge-icon {
-  width: 42px;
-  height: 42px;
-
-  flex: 0 0 42px;
+  width: 40px;
+  height: 40px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 12px;
+  background: #edf7f7;
+  border-radius: 9px;
 
-  background: #e8f8f8;
-
-  color: var(--team-primary);
-
+  color: #3f7379;
   font-size: 17px;
 }
-
 
 .niva-medical-intro-badge strong {
   display: block;
 
-  color: var(--team-dark);
+  margin-bottom: 3px;
 
+  color: #23474d;
   font-size: 13px;
+  font-weight: 700;
 }
-
 
 .niva-medical-intro-badge span {
   display: block;
 
-  margin-top: 4px;
-
-  color: var(--team-muted);
-
+  color: #71868a;
   font-size: 11px;
 }
 
 
 /* =========================================================
    SPECIALTY BLOCK
-   ========================================================= */
+========================================================= */
 
 .niva-specialty-block {
-  width: min(1180px, calc(100% - 48px));
-
-  margin: 0 auto;
-
-  padding: 42px 0;
-
-  border-bottom: 1px solid var(--team-border);
-}
-
-
-.niva-specialty-block:last-of-type {
-  border-bottom: 0;
+  width: 100%;
+  margin-bottom: 34px;
 }
 
 
 /* =========================================================
    SPECIALTY HEADING
-   ========================================================= */
+========================================================= */
 
 .niva-specialty-heading {
-  margin-bottom: 22px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 
-  gap: 25px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #e5edef;
 }
-
 
 .niva-specialty-heading > div {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
-
 .niva-specialty-number {
-  width: 42px;
-  height: 42px;
-
-  flex: 0 0 42px;
+  width: 34px;
+  height: 34px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 12px;
+  flex-shrink: 0;
 
-  background: #e9f7f7;
+  background: #f1f8f8;
+  border: 1px solid #dcebed;
+  border-radius: 8px;
 
-  color: var(--team-primary);
-
-  font-size: 12px;
-  font-weight: 800;
+  color: #4c747a;
+  font-size: 11px;
+  font-weight: 700;
 }
-
 
 .niva-specialty-label {
   display: block;
 
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 
-  color: var(--team-primary);
-
-  font-size: 9px;
-  font-weight: 800;
-
-  letter-spacing: 1px;
+  color: #7b9296;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
 
 .niva-specialty-heading h2 {
   margin: 0;
 
-  color: var(--team-dark);
-
-  font-size: 22px;
-  line-height: 1.2;
-
-  letter-spacing: -0.5px;
+  color: #1d3f45;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
 }
 
-
 .niva-specialty-count {
-  padding: 7px 11px;
+  flex-shrink: 0;
 
-  border: 1px solid var(--team-border);
-  border-radius: 20px;
-
-  background: #ffffff;
-
-  color: var(--team-muted);
-
-  font-size: 10px;
-  font-weight: 700;
+  color: #71888c;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 
 /* =========================================================
    DOCTOR GRID
-   ========================================================= */
+   DESKTOP = EXACTLY 3 CARDS PER ROW
+========================================================= */
 
 .niva-doctors-grid {
+  width: 100%;
+
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 
 /* =========================================================
    DOCTOR PROFILE
-   ========================================================= */
+========================================================= */
 
 .niva-doctor-profile {
   position: relative;
-
+  width: 100%;
+  min-width: 0;
   min-height: 190px;
-
-  padding: 24px;
 
   display: flex;
   flex-direction: column;
 
-  background: var(--team-white);
+  padding: 22px;
 
-  border: 1px solid var(--team-border);
-  border-radius: var(--team-radius);
+  background: #ffffff;
 
-  box-shadow:
-    0 4px 15px rgba(23, 56, 63, 0.025);
+  border: 1px solid #e1eaec;
+  border-radius: 10px;
+
+  box-shadow: 0 2px 10px rgba(23, 56, 63, 0.035);
 
   transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease,
-    border-color 0.22s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-
 .niva-doctor-profile:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
-  border-color: #cfe4e6;
+  border-color: #cbdfe2;
 
-  box-shadow: var(--team-shadow);
+  box-shadow: 0 7px 20px rgba(23, 56, 63, 0.07);
 }
 
 
 /* =========================================================
-   AVATAR
-   ========================================================= */
+   DOCTOR AVATAR
+========================================================= */
 
 .niva-doctor-avatar {
-  width: 52px;
-  height: 52px;
-
-  margin-bottom: 17px;
+  width: 48px;
+  height: 48px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 15px;
+  margin-bottom: 16px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #e7f8f8,
-      #d8f0f1
-    );
+  background: #edf6f7;
+  border: 1px solid #d9e9eb;
+  border-radius: 10px;
 
-  color: var(--team-primary-dark);
-
+  color: #3f7077;
   font-size: 14px;
-  font-weight: 800;
-
-  letter-spacing: 0.3px;
+  font-weight: 700;
 }
 
 
 /* =========================================================
-   DOCTOR INFO
-   ========================================================= */
+   DOCTOR INFORMATION
+========================================================= */
+
+.niva-doctor-info {
+  min-width: 0;
+}
 
 .niva-doctor-role {
   display: block;
 
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
-  color: var(--team-primary);
-
-  font-size: 9px;
-  font-weight: 800;
-
-  letter-spacing: 0.9px;
+  color: #6d888d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-
 .niva-doctor-info h3 {
-  margin: 0;
+  margin: 0 0 5px;
 
-  color: var(--team-dark);
-
+  color: #1c3d43;
   font-size: 17px;
-  line-height: 1.25;
-
-  letter-spacing: -0.2px;
+  line-height: 1.35;
+  font-weight: 700;
 }
 
-
 .niva-doctor-info p {
-  margin: 6px 0 0;
+  margin: 0;
 
-  color: var(--team-muted);
-
-  font-size: 11.5px;
+  color: #71868a;
+  font-size: 12px;
   line-height: 1.5;
 }
 
 
 /* =========================================================
-   ACTIONS
-   ========================================================= */
+   DOCTOR ACTIONS
+========================================================= */
 
 .niva-doctor-actions {
   margin-top: auto;
-  padding-top: 22px;
+  padding-top: 18px;
 
   display: flex;
   align-items: center;
-
-  gap: 9px;
 }
 
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
 
 .niva-doctor-call {
-  min-width: 75px;
-  height: 38px;
+  min-width: 110px;
+  height: 40px;
 
-  padding: 0 13px;
+  padding: 0 18px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 
-  gap: 7px;
-
-  border: 1px solid var(--team-border);
-  border-radius: 9px;
+  border: 1px solid #dbe7e9;
+  border-radius: 8px;
 
   background: #ffffff;
+  color: #254b52;
 
-  color: var(--team-dark);
-
-  font-size: 11px;
-  font-weight: 700;
-
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-
-.niva-doctor-call:hover {
-  border-color: #c5dfe1;
-  background: #f6fbfb;
-}
-
-
-.niva-doctor-call i {
-  color: var(--team-primary);
-
-  font-size: 10px;
-}
-
-
-.niva-doctor-consult {
-  height: 38px;
-
-  flex: 1;
-
-  padding: 0 14px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 9px;
-
-  border: 0;
-  border-radius: 9px;
-
-  background: var(--team-primary);
-
-  color: #ffffff;
-
-  font-size: 10.5px;
-  font-weight: 750;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
 
   transition:
     background 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
-
-.niva-doctor-consult:hover {
-  background: var(--team-primary-dark);
-
-  transform: translateY(-1px);
-
-  box-shadow:
-    0 8px 18px rgba(21, 159, 162, 0.18);
+.niva-doctor-call i {
+  font-size: 11px;
 }
 
-
-.niva-doctor-consult i {
-  font-size: 9px;
+.niva-doctor-call:hover {
+  background: #f5fafb;
+  border-color: #bfd9dc;
+  color: #214a51;
 }
 
 
 /* =========================================================
    CALLBACK MODAL
-   ========================================================= */
+========================================================= */
 
 .niva-callback-modal {
   position: fixed;
-
   inset: 0;
-
   z-index: 9999;
 
   display: none;
   align-items: center;
   justify-content: center;
 
-  padding: 20px;
+  padding: 24px;
 
-  background:
-    rgba(17, 42, 47, 0.55);
-
-  backdrop-filter: blur(5px);
+  background: rgba(18, 42, 47, 0.42);
+  backdrop-filter: blur(3px);
 }
-
 
 .niva-callback-modal.active {
   display: flex;
 }
 
 
+/* =========================================================
+   CALLBACK PANEL
+========================================================= */
+
 .niva-callback-panel {
   position: relative;
 
-  width: min(430px, 100%);
+  width: 100%;
+  max-width: 430px;
 
   padding: 30px;
 
   background: #ffffff;
+  border: 1px solid #e1eaec;
+  border-radius: 14px;
 
-  border-radius: 20px;
-
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.18);
-
-  animation:
-    nivaCallbackIn 0.22s ease;
+  box-shadow: 0 20px 60px rgba(20, 45, 50, 0.16);
 }
 
 
-@keyframes nivaCallbackIn {
-
-  from {
-    opacity: 0;
-    transform: translateY(10px) scale(0.98);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-
-}
-
+/* =========================================================
+   CALLBACK CLOSE
+========================================================= */
 
 .niva-callback-close {
   position: absolute;
+  top: 14px;
+  right: 14px;
 
-  top: 15px;
-  right: 15px;
-
-  width: 31px;
-  height: 31px;
+  width: 32px;
+  height: 32px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border: 1px solid var(--team-border);
-  border-radius: 50%;
+  border: 0;
+  border-radius: 8px;
 
-  background: #ffffff;
-
-  color: var(--team-muted);
+  background: #f5f8f9;
+  color: #637b80;
 
   font-size: 20px;
   line-height: 1;
+
+  cursor: pointer;
+}
+
+.niva-callback-close:hover {
+  background: #edf3f4;
 }
 
 
-.niva-callback-icon {
-  width: 44px;
-  height: 44px;
+/* =========================================================
+   CALLBACK ICON
+========================================================= */
 
-  margin-bottom: 15px;
+.niva-callback-icon {
+  width: 42px;
+  height: 42px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 13px;
+  margin-bottom: 14px;
 
-  background: #e8f8f8;
+  background: #edf7f7;
+  border-radius: 10px;
 
-  color: var(--team-primary);
-
+  color: #42737a;
   font-size: 16px;
 }
 
 
+/* =========================================================
+   CALLBACK TEXT
+========================================================= */
+
 .niva-callback-label {
   display: block;
 
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
-  color: var(--team-primary);
-
-  font-size: 9px;
-  font-weight: 800;
-
-  letter-spacing: 1px;
+  color: #71878b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-
 .niva-callback-panel h3 {
-  margin: 0;
+  margin: 0 0 7px;
 
-  color: var(--team-dark);
-
-  font-size: 23px;
+  color: #1d3f45;
+  font-size: 22px;
+  line-height: 1.3;
 }
 
-
 .niva-callback-description {
-  margin: 8px 0 22px;
+  margin: 0 0 22px;
 
-  color: var(--team-muted);
-
-  font-size: 12px;
+  color: #71858a;
+  font-size: 13px;
   line-height: 1.6;
 }
 
 
-.niva-callback-field {
-  margin-bottom: 15px;
-}
+/* =========================================================
+   CALLBACK FIELD
+========================================================= */
 
+.niva-callback-field {
+  margin-bottom: 16px;
+}
 
 .niva-callback-field label {
   display: block;
 
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 
-  color: var(--team-dark);
-
-  font-size: 10px;
-  font-weight: 750;
+  color: #3d5b60;
+  font-size: 11px;
+  font-weight: 700;
 }
-
 
 .niva-callback-field label span {
-  color: var(--team-muted);
+  color: #8ca0a4;
   font-weight: 500;
 }
-
 
 .niva-callback-field input,
 .niva-callback-field textarea {
   width: 100%;
 
-  padding: 11px 13px;
+  box-sizing: border-box;
 
-  border: 1px solid #dce7e9;
-  border-radius: 9px;
+  padding: 11px 12px;
+
+  border: 1px solid #dbe6e8;
+  border-radius: 8px;
 
   outline: none;
 
-  background: #fbfcfc;
+  background: #ffffff;
+  color: #28484e;
 
-  color: var(--team-dark);
-
-  font-size: 12px;
+  font-family: inherit;
+  font-size: 13px;
 
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-
 .niva-callback-field input {
-  height: 44px;
+  height: 42px;
 }
-
 
 .niva-callback-field textarea {
   min-height: 82px;
-
   resize: vertical;
 }
 
-
 .niva-callback-field input:focus,
 .niva-callback-field textarea:focus {
-  border-color: var(--team-primary);
-
-  background: #ffffff;
-
-  box-shadow:
-    0 0 0 3px rgba(21, 159, 162, 0.08);
-}
-
-
-.niva-callback-submit {
-  width: 100%;
-  height: 46px;
-
-  margin-top: 5px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 9px;
-
-  border: 0;
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--team-primary),
-      var(--team-primary-dark)
-    );
-
-  color: #ffffff;
-
-  font-size: 12px;
-  font-weight: 750;
-}
-
-
-.niva-callback-submit:hover {
-  box-shadow:
-    0 10px 25px rgba(21, 159, 162, 0.2);
-}
-
-
-.niva-callback-note {
-  margin: 15px 0 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 7px;
-
-  color: #89979b;
-
-  font-size: 9.5px;
-}
-
-
-.niva-callback-note i {
-  color: var(--team-primary);
+  border-color: #a9cdd1;
+  box-shadow: 0 0 0 3px rgba(169, 205, 209, 0.16);
 }
 
 
 /* =========================================================
-   RESPONSIVE
-   ========================================================= */
+   CALLBACK SUBMIT
+========================================================= */
 
-@media (max-width: 850px) {
+.niva-callback-submit {
+  width: 100%;
+  height: 44px;
 
-  .niva-medical-intro-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
 
-  .niva-medical-intro-badge {
-    width: 100%;
-  }
+  margin-top: 4px;
 
-  .niva-doctors-grid {
-    grid-template-columns: 1fr;
-  }
+  border: 0;
+  border-radius: 8px;
 
+  background: #244f56;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.niva-callback-submit:hover {
+  background: #1d444b;
+  transform: translateY(-1px);
 }
 
 
-@media (max-width: 600px) {
+/* =========================================================
+   CALLBACK NOTE
+========================================================= */
+
+.niva-callback-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin: 14px 0 0;
+
+  color: #84999d;
+  font-size: 10px;
+  text-align: center;
+}
+
+.niva-callback-note i {
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.niva-footer {
+  width: 100%;
+
+  background: #f7fafb;
+  border-top: 1px solid #e4edef;
+}
+
+
+/* =========================================================
+   FOOTER MAIN
+========================================================= */
+
+.niva-footer-main {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+  padding: 48px 24px;
+
+  display: grid;
+  grid-template-columns: 1.7fr repeat(4, 1fr);
+  gap: 34px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.niva-footer-brand {
+  min-width: 0;
+}
+
+.niva-footer-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+
+  margin-bottom: 12px;
+
+  text-decoration: none;
+}
+
+.niva-footer-name {
+  color: #244f56;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.niva-footer-type {
+  color: #789094;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.niva-footer-description {
+  max-width: 320px;
+
+  margin: 0;
+
+  color: #71858a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER SOCIAL
+========================================================= */
+
+.niva-footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.niva-footer-social a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dce7e9;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.niva-footer-social a:hover {
+  background: #f0f7f8;
+  border-color: #c6dcdf;
+}
+
+.niva-footer-social img {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.niva-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.niva-footer-column h3 {
+  margin: 0 0 6px;
+
+  color: #2c4e54;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.niva-footer-column a {
+  color: #71868a;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.niva-footer-column a:hover {
+  color: #315e65;
+}
+
+
+/* =========================================================
+   FOOTER SEO
+========================================================= */
+
+.niva-footer-seo {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 26px 24px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid #e4edef;
+}
+
+.niva-footer-seo-item h3 {
+  margin: 0 0 7px;
+
+  color: #385a60;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.niva-footer-seo-item p {
+  margin: 0;
+
+  color: #7b8e92;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.niva-footer-bottom {
+  width: 100%;
+
+  border-top: 1px solid #e4edef;
+}
+
+.niva-footer-bottom p {
+  max-width: 1240px;
+
+  margin: 0 auto;
+  padding: 18px 24px;
+
+  box-sizing: border-box;
+
+  color: #839598;
+
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.niva-footer-bottom span {
+  margin-left: 5px;
+  color: #71878b;
+}
+
+
+/* =========================================================
+   MOBILE BOTTOM NAVIGATION
+========================================================= */
+
+.niva-mobile-bottom-nav {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .niva-medical-team {
+    padding: 0 16px 70px;
+  }
 
   .niva-medical-intro {
-    padding: 38px 0 32px;
+    padding: 28px 0 24px;
   }
 
-  .niva-medical-intro-inner,
-  .niva-specialty-block {
-    width: min(100% - 28px, 1180px);
+  .niva-medical-intro-inner {
+    display: block;
   }
 
-  .niva-medical-intro h1 {
-    font-size: 32px;
+  .niva-medical-intro-copy h1 {
+    font-size: 30px;
   }
 
   .niva-medical-intro-copy p {
     font-size: 13px;
   }
 
+  .niva-medical-intro-badge {
+    margin-top: 20px;
+  }
+
+  .niva-doctors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .niva-footer-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .niva-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .niva-footer-seo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .niva-medical-team {
+    padding: 0 14px 80px;
+  }
+
+  .niva-medical-intro {
+    padding: 24px 0 20px;
+  }
+
+  .niva-medical-eyebrow {
+    font-size: 10px;
+  }
+
+  .niva-medical-intro-copy h1 {
+    font-size: 27px;
+  }
+
+  .niva-medical-intro-copy p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .niva-medical-intro-badge {
+    padding: 12px 14px;
+  }
+
   .niva-specialty-block {
-    padding: 30px 0;
+    margin-bottom: 28px;
   }
 
   .niva-specialty-heading {
     align-items: flex-start;
   }
 
+  .niva-specialty-heading h2 {
+    font-size: 17px;
+  }
+
+  .niva-specialty-count {
+    font-size: 10px;
+  }
+
+  .niva-doctors-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .niva-doctor-profile {
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .niva-doctor-avatar {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 13px;
+  }
+
+  .niva-doctor-info h3 {
+    font-size: 16px;
+  }
+
+  .niva-doctor-actions {
+    padding-top: 16px;
+  }
+
+  .niva-doctor-call {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .niva-callback-modal {
+    padding: 14px;
+  }
+
+  .niva-callback-panel {
+    padding: 24px 18px;
+    border-radius: 12px;
+  }
+
+  .niva-footer-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 36px 18px;
+  }
+
+  .niva-footer-brand {
+    grid-column: auto;
+  }
+
+  .niva-footer-seo {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px 18px;
+  }
+
+  .niva-footer-bottom p {
+    padding: 16px 18px;
+  }
+
+  .niva-footer-bottom span {
+    display: block;
+    margin: 4px 0 0;
+  }
+
+  .niva-mobile-bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9000;
+
+    height: 62px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #ffffff;
+    border-top: 1px solid #dfe9eb;
+
+    box-shadow: 0 -4px 16px rgba(23, 56, 63, 0.06);
+  }
+
+  .niva-mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    color: #71878b;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+  .niva-mobile-nav-item i {
+    font-size: 15px;
+  }
+
+  .niva-mobile-nav-item.niva-mobile-call {
+    color: #315e65;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .niva-medical-intro-copy h1 {
+    font-size: 24px;
+  }
+
+  .niva-specialty-number {
+    width: 30px;
+    height: 30px;
+  }
+
   .niva-specialty-heading > div {
-    align-items: flex-start;
+    gap: 9px;
+  }
+
+  .niva-specialty-heading h2 {
+    font-size: 15px;
   }
 
   .niva-specialty-count {
     display: none;
-  }
-
-  .niva-doctor-profile {
-    padding: 20px;
-  }
-
-  .niva-doctor-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .niva-doctor-call,
-  .niva-doctor-consult {
-    width: 100%;
-  }
-
-  .niva-callback-panel {
-    padding: 25px 20px;
   }
 
 }
